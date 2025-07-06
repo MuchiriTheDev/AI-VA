@@ -6,7 +6,7 @@ const CoreBenefits = () => {
   return (
     <div
       id="core-benefits"
-      className="w-full max-w-[100vw] h-[280vh]  py-10 bg-gray-50"
+      className="w-full max-w-[100vw] h-[230vh]  py-10 bg-gray-50"
     >
       {/* Title Component (assuming it matches the Services component's Title) */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
