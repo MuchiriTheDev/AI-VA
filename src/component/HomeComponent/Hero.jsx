@@ -66,7 +66,8 @@ const Hero = () => {
 
         {/* CTA Button */}
         <motion.a
-          href="#book-call" // Replace with your booking link
+          href="https://zcal.co/carolinekabi/discovery-call-30min" // Replace with your booking link
+          target='_blank'
           className="inline-flex items-center px-5 py-2.5 text-base font-semibold rounded-full shadow-lg"
           style={{ backgroundColor: '#C8287E', color: '#FFFFFF' }} // Pink 300 button
           variants={buttonVariants}

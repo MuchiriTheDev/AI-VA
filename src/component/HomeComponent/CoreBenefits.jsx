@@ -2,6 +2,83 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCheckCircle, FaConciergeBell } from 'react-icons/fa';
 
+const CoreBenefits = () => {
+  return (
+    <div
+      id="core-benefits"
+      className="w-full max-w-[100vw] h-[280vh]  py-10 bg-gray-50"
+    >
+      {/* Title Component (assuming it matches the Services component's Title) */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold mb-3 leading-tight" style={{ color: '#C8287E' }}>
+          Core Benefits
+        </h2>
+        <h3 className="text-sm sm:text-base font-semibold mb-12" style={{ color: '#333333' }}>
+          Here’s What Happens When You Work With Us:
+        </h3>
+      </div>
+
+      <div className="relative flex justify-center items-center mt-7">
+        {/* Vertical Gradient Line */}
+        <div
+          className="top-0 absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 w-2 bg-gradient-to-b from-pink-600 via-pink-400 to-pink-200 min-h-screen5 md:h-screen5 z-1"
+        ></div>
+
+        {/* Benefit Cards */}
+        <div className="relative w-full h-full min-h-screen5  mx-auto">
+          {benefits.map((benefit, index) => {
+            const isLeft = index % 2 === 0; // Alternate sides
+            const topPosition = `${index * 70}px`; // Match Services spacing
+
+            return (
+              <div
+                key={benefit.id}
+                className="relative w-full flex justify-start md:justify-center"
+                style={{ marginTop: index === 0 ? '0' : '70px' }}
+              >
+                {/* Dot on the timeline */}
+                <motion.div
+                  initial={{ scale: 0, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.4, delay: 0 }}
+                  viewport={{ once: true }}
+                  className="absolute w-5 h-5 bg-pink-600 rounded-full left-right md:transform md:-translate-x-1/2 z-10"
+                  style={{ top: topPosition }}
+                ></motion.div>
+
+                {/* Card */}
+                <motion.div
+                  initial={{ y: 100, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0 }}
+                  viewport={{ once: true }}
+                  className={`bg-white shadow-lg p-6 rounded-lg w-[calc(100%-3rem)] md:w-1/3 border border-[#C8287E] hover:shadow-xl transition-shadow duration-300 absolute ${
+                    isLeft ? 'left-8 md:left-16 md:mr-auto' : 'left-8 md:right-16 md:ml-auto'
+                  }`}
+                  style={{ top: topPosition }}
+                >
+                  <div className="flex items-center mb-2">
+                    {benefit.icon}
+                    <h4
+                      className="text-sm sm:text-base font-semibold ml-2"
+                      style={{ color: '#C8287E' }}
+                    >
+                      {benefit.title}
+                    </h4>
+                  </div>
+                  <p className="text-xs text-gray-700 mt-2">{benefit.description}</p>
+                </motion.div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default CoreBenefits;
+
 const benefits = [
   {
     id: 1,
@@ -40,147 +117,3 @@ const benefits = [
     icon: <FaConciergeBell className="text-xl" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
 ];
-
-// Animation variants for Framer Motion
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      when: 'beforeChildren',
-      staggerChildren: 0.3, // Increased stagger for text-message effect
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30, scale: 0.8 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      type: 'spring',
-      stiffness: 200,
-      damping: 20,
-      duration: 0.5,
-    },
-  },
-  hover: {
-    scale: 1.05,
-    rotate: 2, // Slight rotation for playful effect
-    transition: { duration: 0.2 },
-  },
-};
-
-const dotVariants = {
-  hidden: { scale: 0, opacity: 0 },
-  visible: {
-    scale: 1,
-    opacity: 1,
-    transition: {
-      type: 'spring',
-      stiffness: 300,
-      damping: 15,
-      duration: 0.4,
-    },
-  },
-  hover: { scale: 1.3, transition: { duration: 0.2 } },
-};
-
-const CoreBenefits = () => {
-  return (
-    <section id="core-benefits" className="w-full max-w-[100vw] min-h-[60vh] md:min-h-[80vh] h-fit py-8 sm:py-10 lg:py-12 bg-white">
-      {/* Main Headline */}
-      <motion.div
-        className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
-        <motion.h2
-          className="text-2xl md:text-3xl font-bold mb-3 leading-tight"
-          style={{ color: '#C8287E' }} // Pink 300
-          variants={itemVariants}
-        >
-          Core Benefits
-        </motion.h2>
-        <motion.h3
-          className="text-sm sm:text-base font-semibold mb-6"
-          style={{ color: '#333333' }} // Purple 500
-          variants={itemVariants}
-        >
-          Here’s What Happens When You Work With Us:
-        </motion.h3>
-
-        {/* Timeline */}
-        <div className="relative flex justify-center items-center mt-8">
-          {/* Vertical Gradient Line */}
-          <div
-            className="w-1.5 bg-gradient-to-b from-[#C8287E] to-[#] min-h-[50vh] md:min-h-[70vh] h-screen absolute left-3 md:left-1/2 md:transform md:-translate-x-1/2"
-          ></div>
-
-          {/* Benefit Items */}
-          <div className="relative w-full">
-            {benefits.map((benefit, index) => {
-              const isLeft = index % 2 === 0; // Alternate sides for medium screens and above
-              const topPosition = `${index * 80}px`; // Reduced vertical spacing
-
-              return (
-                <div
-                  key={benefit.id}
-                  className="relative w-full flex justify-start md:justify-center"
-                  style={{ marginTop: index === 0 ? '0' : '33px' }}
-                >
-                  {/* Timeline Dot */}
-                  <motion.div
-                    className="absolute w-5 h-5 bg-[#C8287E] rounded-full left-2 md:left-1/2 md:transform md:-translate-x-1/2 z-10"
-                    style={{ top: topPosition }}
-                    variants={dotVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    whileHover="hover"
-                    viewport={{ once: true }}
-                  ></motion.div>
-
-                  {/* Content Block */}
-                  <motion.div
-                    className={`bg-gradient-to-b from-gray-50 to-gray-100 shadow-md p-4 rounded-lg w-[calc(100%-3rem)] md:w-[30%] border border-[#C8287E] hover:shadow-lg transition-shadow duration-300 ${
-                      isLeft ? 'left-7 md:left-0 md:mr-auto' : 'left-7 md:right-0 md:ml-auto'
-                    }`}
-                    style={{ top: topPosition }}
-                    variants={itemVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    whileHover="hover"
-                    viewport={{ once: true }}
-                  >
-                    <div className="flex items-center mb-2">
-                      {benefit.icon}
-                      <h4
-                        className="text-sm sm:text-base font-semibold ml-2"
-                        style={{ color: '#C8287E' }} // Purple 500
-                      >
-                        {benefit.title}
-                      </h4>
-                    </div>
-                    <p
-                      className="text-sm sm:text-base leading-relaxed"
-                      style={{ color: '#333333' }} // Dark gray
-                    >
-                      {benefit.description}
-                    </p>
-                  </motion.div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </motion.div>
-    </section>
-  );
-};
-
-export default CoreBenefits;

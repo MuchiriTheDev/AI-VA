@@ -86,7 +86,8 @@ const FinalCallToAction = () => {
 
         {/* Primary CTA: Book a Free Discovery Call */}
         <motion.a
-          href="#book-call"
+          href="https://zcal.co/carolinekabi/discovery-call-30min"
+          target='_blank'
           className="inline-flex items-center px-5 py-2.5 text-sm sm:text-base font-semibold rounded-full shadow-lg mb-4"
           style={{ backgroundColor: '#C8287E', color: '#FFFFFF' }} // Pink 300
           variants={itemVariants}

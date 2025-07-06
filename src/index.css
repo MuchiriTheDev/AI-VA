@@ -11,3 +11,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+.min-h-screen5 {
+  min-height: 130vh;
+}
+.h-screen5{
+  height: 150vh;
+}
+.left-right {
+  left: 49.3%;
+}
+
+@media (max-width: 768px) {
+  .left-right {
+    left: 9px;
+  }
+  .min-h-screen5 {
+  min-height: 120vh;
+  }
+  .h-screen5{
+    height: 140vh;
+  }
+  
+}
