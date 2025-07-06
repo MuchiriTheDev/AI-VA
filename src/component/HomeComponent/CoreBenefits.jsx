@@ -7,37 +7,37 @@ const benefits = [
     id: 1,
     title: 'Get Things Done',
     description: 'No more dusty to-do lists—your VA tackles tasks with precision, freeing you to focus on your vision.',
-    icon: <FaCheckCircle className="text-xl" style={{ color: '#F06292' }} aria-hidden="true" />,
+    icon: <FaCheckCircle className="text-xl" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
   {
     id: 2,
     title: 'Launch Faster',
     description: 'Your AI-trained VA accelerates your projects, getting you to market with speed and efficiency.',
-    icon: <FaCheckCircle className="text-xl" style={{ color: '#F06292' }} aria-hidden="true" />,
+    icon: <FaCheckCircle className="text-xl" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
   {
     id: 3,
     title: 'Gain Visibility',
     description: 'Consistent content and systems in motion ensure your brand stands out and stays top-of-mind.',
-    icon: <FaCheckCircle className="text-xl" style={{ color: '#F06292' }} aria-hidden="true" />,
+    icon: <FaCheckCircle className="text-xl" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
   {
     id: 4,
     title: 'Feel Organized',
     description: 'Stay on top of your personal and professional life with a VA who streamlines everything.',
-    icon: <FaCheckCircle className="text-xl" style={{ color: '#F06292' }} aria-hidden="true" />,
+    icon: <FaCheckCircle className="text-xl" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
   {
     id: 5,
     title: 'Scale with Confidence',
     description: 'Your VA has your back, empowering you to grow your business without the stress.',
-    icon: <FaCheckCircle className="text-xl" style={{ color: '#F06292' }} aria-hidden="true" />,
+    icon: <FaCheckCircle className="text-xl" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
   {
     id: 6,
     title: 'Personal Life, Handled',
     description: 'Travel bookings, doctor appointments, calendar management, and family coordination—done.',
-    icon: <FaConciergeBell className="text-xl" style={{ color: '#F06292' }} aria-hidden="true" />,
+    icon: <FaConciergeBell className="text-xl" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
 ];
 
@@ -102,7 +102,7 @@ const CoreBenefits = () => {
       >
         <motion.h2
           className="text-2xl md:text-3xl font-bold mb-3 leading-tight"
-          style={{ color: '#F06292' }} // Pink 300
+          style={{ color: '#C8287E' }} // Pink 300
           variants={itemVariants}
         >
           Core Benefits
@@ -119,7 +119,7 @@ const CoreBenefits = () => {
         <div className="relative flex justify-center items-center mt-8">
           {/* Vertical Gradient Line */}
           <div
-            className="w-1.5 bg-gradient-to-b from-[#F06292] to-[#] min-h-[50vh] md:min-h-[70vh] h-screen absolute left-3 md:left-1/2 md:transform md:-translate-x-1/2"
+            className="w-1.5 bg-gradient-to-b from-[#C8287E] to-[#] min-h-[50vh] md:min-h-[70vh] h-screen absolute left-3 md:left-1/2 md:transform md:-translate-x-1/2"
           ></div>
 
           {/* Benefit Items */}
@@ -136,7 +136,7 @@ const CoreBenefits = () => {
                 >
                   {/* Timeline Dot */}
                   <motion.div
-                    className="absolute w-5 h-5 bg-[#F06292] rounded-full left-2 md:left-1/2 md:transform md:-translate-x-1/2 z-10"
+                    className="absolute w-5 h-5 bg-[#C8287E] rounded-full left-2 md:left-1/2 md:transform md:-translate-x-1/2 z-10"
                     style={{ top: topPosition }}
                     variants={dotVariants}
                     initial="hidden"
@@ -147,7 +147,7 @@ const CoreBenefits = () => {
 
                   {/* Content Block */}
                   <motion.div
-                    className={`bg-gradient-to-b from-gray-50 to-gray-100 shadow-md p-4 rounded-lg w-[calc(100%-3rem)] md:w-[30%] border border-[#F06292] hover:shadow-lg transition-shadow duration-300 ${
+                    className={`bg-gradient-to-b from-gray-50 to-gray-100 shadow-md p-4 rounded-lg w-[calc(100%-3rem)] md:w-[30%] border border-[#C8287E] hover:shadow-lg transition-shadow duration-300 ${
                       isLeft ? 'left-7 md:left-0 md:mr-auto' : 'left-7 md:right-0 md:ml-auto'
                     }`}
                     style={{ top: topPosition }}
@@ -161,7 +161,7 @@ const CoreBenefits = () => {
                       {benefit.icon}
                       <h4
                         className="text-sm sm:text-base font-semibold ml-2"
-                        style={{ color: '#F06292' }} // Purple 500
+                        style={{ color: '#C8287E' }} // Purple 500
                       >
                         {benefit.title}
                       </h4>

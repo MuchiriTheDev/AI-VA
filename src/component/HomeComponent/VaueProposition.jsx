@@ -7,31 +7,31 @@ const values = [
     id: 1,
     title: 'Personalized VA Matching',
     description: 'Based on your needs & goals, we pair you with the perfect VA.',
-    icon: <FaUserCheck className="text-sm sm:text-base md:text-lg" style={{ color: '#F06292' }} aria-hidden="true" />,
+    icon: <FaUserCheck className="text-sm sm:text-base md:text-lg" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
   {
     id: 2,
     title: 'AI-Skilled VA',
     description: 'Fully trained with advanced AI skills (ChatGPT, tools, automations).',
-    icon: <FaRobot className="text-sm sm:text-base md:text-lg" style={{ color: '#F06292' }} aria-hidden="true" />,
+    icon: <FaRobot className="text-sm sm:text-base md:text-lg" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
   {
     id: 3,
     title: 'Business & Personal Support',
     description: 'Admin, marketing, lifestyle—your VA handles it all.',
-    icon: <FaBriefcase className="text-sm sm:text-base md:text-lg" style={{ color: '#F06292' }} aria-hidden="true" />,
+    icon: <FaBriefcase className="text-sm sm:text-base md:text-lg" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
   {
     id: 4,
     title: 'Strategy & Onboarding',
     description: 'Strategy calls + onboarding support with the founder.',
-    icon: <FaPhone className="text-sm sm:text-base md:text-lg" style={{ color: '#F06292' }} aria-hidden="true" />,
+    icon: <FaPhone className="text-sm sm:text-base md:text-lg" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
   {
     id: 5,
     title: 'Weekly Check-Ins',
     description: 'Regular updates to ensure everything’s on track.',
-    icon: <FaClock className="text-sm sm:text-base md:text-lg" style={{ color: '#F06292' }} aria-hidden="true" />,
+    icon: <FaClock className="text-sm sm:text-base md:text-lg" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
 ];
 
@@ -40,19 +40,19 @@ const bonuses = [
     id: 6,
     title: 'Dedicated Onboarding Concierge',
     description: 'Personalized support to get you started seamlessly.',
-    icon: <FaConciergeBell className="text-sm sm:text-base md:text-lg" style={{ color: '#F06292' }} aria-hidden="true" />,
+    icon: <FaConciergeBell className="text-sm sm:text-base md:text-lg" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
   {
     id: 7,
     title: 'VA Match Guarantee',
     description: 'Not vibing? We’ll rematch at no extra cost.',
-    icon: <FaSyncAlt className="text-sm sm:text-base md:text-lg" style={{ color: '#F06292' }} aria-hidden="true" />,
+    icon: <FaSyncAlt className="text-sm sm:text-base md:text-lg" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
   {
     id: 8,
     title: 'Flexible Pricing',
     description: 'Custom packages tailored to your needs.',
-    icon: <FaDollarSign className="text-sm sm:text-base md:text-lg" style={{ color: '#F06292' }} aria-hidden="true" />,
+    icon: <FaDollarSign className="text-sm sm:text-base md:text-lg" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
 ];
 
@@ -86,7 +86,7 @@ const itemVariants = {
   hover: {
     scale: 1.03,
     rotate: 1, // Subtle tilt for a professional yet dynamic effect
-    boxShadow: '0 4px 12px rgba(240, 98, 146, 0.3), 0 0 0 2px #F06292',
+    boxShadow: '0 4px 12px rgba(240, 98, 146, 0.3), 0 0 0 2px #C8287E',
     transition: { duration: 0.2 },
   },
 };
@@ -107,11 +107,11 @@ const ValueProposition = () => {
         {/* Main Headline */}
         <motion.h2
           className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 leading-tight text-center relative"
-          style={{ color: '#F06292' }} // Pink 300
+          style={{ color: '#C8287E' }} // Pink 300
           variants={itemVariants}
         >
           AI-Trained. Business-Savvy. Personally Matched.
-          <span className="block w-32 h-1 mx-auto mt-2 bg-gradient-to-r from-[#F06292] to-[#F06292] rounded-full"></span>
+          <span className="block w-32 h-1 mx-auto mt-2 bg-gradient-to-r from-[#C8287E] to-[#C8287E] rounded-full"></span>
         </motion.h2>
 
         {/* Subheadline */}
@@ -129,7 +129,7 @@ const ValueProposition = () => {
           <div className="flex-1">
             <motion.h4
               className="text-sm sm:text-base md:text-lg font-semibold mb-4 text-center md:text-left"
-              style={{ color: '#F06292' }} // Purple 500
+              style={{ color: '#C8287E' }} // Purple 500
               variants={itemVariants}
             >
               What’s Included:
@@ -138,7 +138,7 @@ const ValueProposition = () => {
               {values.map((value) => (
                 <motion.div
                   key={value.id}
-                  className="bg-white p-4 sm:p-5 rounded-lg shadow-sm border-2 border-[#F06292] bg-gradient-to-b from-gray-50 to-gray-100  hover:shadow-md transition-shadow duration-300 flex items-start"
+                  className="bg-white p-4 sm:p-5 rounded-lg shadow-sm border-2 border-[#C8287E] bg-gradient-to-b from-gray-50 to-gray-100  hover:shadow-md transition-shadow duration-300 flex items-start"
                   variants={itemVariants}
                   initial="hidden"
                   whileInView="visible"
@@ -149,7 +149,7 @@ const ValueProposition = () => {
                   <div>
                     <h5
                       className="text-sm sm:text-base md:text-lg font-semibold"
-                      style={{ color: '#F06292' }} // Purple 500
+                      style={{ color: '#C8287E' }} // Purple 500
                     >
                       {value.title}
                     </h5>
@@ -169,7 +169,7 @@ const ValueProposition = () => {
           <div className="flex-1">
             <motion.h4
               className="text-sm sm:text-base md:text-lg font-semibold mb-4 text-center md:text-left"
-              style={{ color: '#F06292' }} // Purple 500
+              style={{ color: '#C8287E' }} // Purple 500
               variants={itemVariants}
             >
               Your Bonus Support:
@@ -178,7 +178,7 @@ const ValueProposition = () => {
               {bonuses.map((bonus) => (
                 <motion.div
                   key={bonus.id}
-                  className="bg-white p-4 sm:p-5 rounded-lg shadow-sm bg-gradient-to-b from-gray-50 to-gray-100  border-2 border-[#F06292] hover:shadow-md transition-shadow duration-300 flex items-start"
+                  className="bg-white p-4 sm:p-5 rounded-lg shadow-sm bg-gradient-to-b from-gray-50 to-gray-100  border-2 border-[#C8287E] hover:shadow-md transition-shadow duration-300 flex items-start"
                   variants={itemVariants}
                   initial="hidden"
                   whileInView="visible"
@@ -189,7 +189,7 @@ const ValueProposition = () => {
                   <div>
                     <h5
                       className="text-sm sm:text-base md:text-lg font-semibold"
-                      style={{ color: '#F06292' }} // Purple 500
+                      style={{ color: '#C8287E' }} // Purple 500
                     >
                       {bonus.title}
                     </h5>

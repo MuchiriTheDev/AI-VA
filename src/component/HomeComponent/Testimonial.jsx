@@ -7,8 +7,8 @@ const testimonials = [
     id: 1,
     quote:
       'Working with Caroline and the CNK VA Solutions team has been an absolute game changer for my business. Thanks to her leadership, my operations are smoother, my team is more organized, and I have the confidence to scale.',
-    author: 'Tekiah Tunstall',
-    title: 'Founder & CEO, Preferred Solutions Transport',
+    author: 'Martin Mwenda',
+    title: `CEO Horizon Solutions`,
   },
   {
     id: 2,
@@ -57,7 +57,7 @@ const itemVariants = {
 const dotVariants = {
   hidden: { scale: 0, opacity: 0 },
   visible: { scale: 1, opacity: 1, transition: { type: 'spring', stiffness: 300, damping: 15 } },
-  active: { scale: 1.3, backgroundColor: '#8E24AA', transition: { duration: 0.2 } },
+  active: { scale: 1.3, backgroundColor: '#C8287E', transition: { duration: 0.2 } },
 };
 
 const buttonVariants = {
@@ -111,7 +111,7 @@ const Testimonial = () => {
         {/* Main Headline */}
         <motion.h2
           className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 leading-tight"
-          style={{ color: '#8E24AA' }} // Pink 300
+          style={{ color: '#C8287E' }} // Pink 300
           variants={itemVariants}
         >
           Real Clients. Real Results.
@@ -130,8 +130,8 @@ const Testimonial = () => {
         <div className="relative mt-4 flex items-center justify-center">
           {/* Previous Button */}
           <motion.button
-            className="absolute left-0 sm:left-2 md:-left-10 p-2 rounded-full border border-[#8E24AA] bg-white"
-            style={{ color: '#8E24AA' }}
+            className="absolute left-0 sm:left-2 md:-left-10 p-2 rounded-full border border-[#C8287E] bg-white"
+            style={{ color: '#C8287E' }}
             variants={buttonVariants}
             initial="hidden"
             animate="visible"
@@ -160,7 +160,7 @@ const Testimonial = () => {
               </p>
               <p
                 className="text-sm sm:text-base font-semibold mt-4"
-                style={{ color: '#8E24AA' }} // Purple 500
+                style={{ color: '#C8287E' }} // Purple 500
               >
                 — {testimonials[currentIndex].author}, {testimonials[currentIndex].title}
               </p>
@@ -169,8 +169,8 @@ const Testimonial = () => {
 
           {/* Next Button */}
           <motion.button
-            className="absolute right-0 sm:right-2 md:-right-10 p-2 rounded-full border border-[#8E24AA] bg-white"
-            style={{ color: '#8E24AA' }}
+            className="absolute right-0 sm:right-2 md:-right-10 p-2 rounded-full border border-[#C8287E] bg-white"
+            style={{ color: '#C8287E' }}
             variants={buttonVariants}
             initial="hidden"
             animate="visible"
@@ -188,7 +188,7 @@ const Testimonial = () => {
             <motion.button
               key={index}
               className="w-3 h-3 rounded-full"
-              style={{ backgroundColor: index === currentIndex ? '#8E24AA' : '#F06292' }}
+              style={{ backgroundColor: index === currentIndex ? '#000000' : '#C8287E' }}
               variants={dotVariants}
               initial="hidden"
               animate={index === currentIndex ? 'active' : 'visible'}

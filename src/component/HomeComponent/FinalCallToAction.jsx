@@ -68,11 +68,11 @@ const FinalCallToAction = () => {
         {/* Headline */}
         <motion.h2
           className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 leading-tight"
-          style={{ color: '#F06292' }} // Pink 300
+          style={{ color: '#C8287E' }} // Pink 300
           variants={itemVariants}
         >
           Ready to Delegate Like a CEO?
-          <span className="block w-24 h-1 mx-auto mt-2 bg-gradient-to-r from-[#F06292] to-[#8E24AA] rounded-full"></span>
+          <span className="block w-24 h-1 mx-auto mt-2 bg-gradient-to-r from-[#C8287E] to-[#C8287E] rounded-full"></span>
         </motion.h2>
 
         {/* Subheadline */}
@@ -88,7 +88,7 @@ const FinalCallToAction = () => {
         <motion.a
           href="#book-call"
           className="inline-flex items-center px-5 py-2.5 text-sm sm:text-base font-semibold rounded-full shadow-lg mb-4"
-          style={{ backgroundColor: '#F06292', color: '#FFFFFF' }} // Pink 300
+          style={{ backgroundColor: '#C8287E', color: '#FFFFFF' }} // Pink 300
           variants={itemVariants}
           whileHover="hover"
           whileTap={{ scale: 0.95 }}
@@ -109,12 +109,12 @@ const FinalCallToAction = () => {
         {/* Secondary CTA: Request a Package Here */}
         {/* <motion.a
           href="#request-quote"
-          className="inline-flex items-center text-sm sm:text-base font-medium underline decoration-[#8E24AA] decoration-2 hover:decoration-4 transition-all duration-200"
-          style={{ color: '#8E24AA' }} // Purple 500
+          className="inline-flex items-center text-sm sm:text-base font-medium underline decoration-[#C8287E] decoration-2 hover:decoration-4 transition-all duration-200"
+          style={{ color: '#C8287E' }} // Purple 500
           variants={linkVariants}
           whileHover="hover"
         >
-          <FaEnvelope className="mr-2 text-sm sm:text-base" style={{ color: '#8E24AA' }} aria-hidden="true" />
+          <FaEnvelope className="mr-2 text-sm sm:text-base" style={{ color: '#C8287E' }} aria-hidden="true" />
           Want a custom quote? Request a Package Here
         </motion.a> */}
       </motion.div>

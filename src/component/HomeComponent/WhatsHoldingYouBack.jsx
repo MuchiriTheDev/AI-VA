@@ -35,7 +35,7 @@ const WhatsHoldingYouBack = () => {
         {/* Main Headline */}
         <motion.h2
           className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight"
-          style={{ color: '#8E24AA' }} // Pink 300
+          style={{ color: '#C8287E' }} // Pink 300
           variants={cardVariants}
         >
           What’s Holding You Back?
@@ -59,12 +59,12 @@ const WhatsHoldingYouBack = () => {
           >
             <FaExclamationTriangle
               className="mx-auto mb-4 text-3xl"
-              style={{ color: '#8E24AA' }} // Purple 500
+              style={{ color: '#C8287E' }} // Purple 500
               aria-hidden="true"
             />
             <h3
               className="text-lg sm:text-xl font-semibold mb-5"
-              style={{ color: '#8E24AA' }} // Purple 500
+              style={{ color: '#C8287E' }} // Purple 500
             >
               Tired of Doing Everything Yourself?
             </h3>
@@ -84,12 +84,12 @@ const WhatsHoldingYouBack = () => {
           >
             <FaLightbulb
               className="mx-auto mb-4 text-3xl"
-              style={{ color: '#8E24AA' }} // Purple 500
+              style={{ color: '#C8287E' }} // Purple 500
               aria-hidden="true"
             />
             <h4
               className="text-base sm:text-lg font-semibold mb-3"
-              style={{ color: '#8E24AA' }} // Purple 500
+              style={{ color: '#C8287E' }} // Purple 500
             >
               The Truth
             </h4>
@@ -109,12 +109,12 @@ const WhatsHoldingYouBack = () => {
           >
             <FaUsers
               className="mx-auto mb-4 text-3xl"
-              style={{ color: '#8E24AA' }} // Purple 500
+              style={{ color: '#C8287E' }} // Purple 500
               aria-hidden="true"
             />
             <h4
               className="text-base sm:text-lg font-semibold mb-3"
-              style={{ color: '#8E24AA' }} // Purple 500
+              style={{ color: '#C8287E' }} // Purple 500
             >
               The Solution We Bring
             </h4>

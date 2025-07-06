@@ -49,7 +49,7 @@ const Hero = () => {
         {/* Headline */}
         <motion.h1
           className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight"
-          style={{ color: '#F06292' }} // Pink 300
+          style={{ color: '#C8287E' }} // Pink 300
           variants={childVariants}
         >
           You Lead. We Lift.
@@ -68,7 +68,7 @@ const Hero = () => {
         <motion.a
           href="#book-call" // Replace with your booking link
           className="inline-flex items-center px-5 py-2.5 text-base font-semibold rounded-full shadow-lg"
-          style={{ backgroundColor: '#F06292', color: '#FFFFFF' }} // Pink 300 button
+          style={{ backgroundColor: '#C8287E', color: '#FFFFFF' }} // Pink 300 button
           variants={buttonVariants}
           whileHover="hover"
         >

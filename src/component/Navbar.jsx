@@ -36,7 +36,7 @@ const linkVariants = {
   },
   hover: {
     scale: 1.05,
-    color: '#F06292', // Pink 300 on hover
+    color: '#C8287E', // Pink 300 on hover
     transition: { duration: 0.2 },
   },
 };
@@ -143,7 +143,7 @@ const Navbar = () => {
                 >
                   {link.name}
                   <motion.span
-                    className="absolute bottom-[-4px] left-0 w-full h-[2px] bg-[#F06292]"
+                    className="absolute bottom-[-4px] left-0 w-full h-[2px] bg-[#C8287E]"
                     variants={underlineVariants}
                     initial="hidden"
                     whileHover="hover"
@@ -157,7 +157,7 @@ const Navbar = () => {
         <motion.a
             href="#book-call"
             className="hidden md:inline-flex items-center px-4 py-2 text-sm sm:text-base font-semibold rounded-full"
-            style={{ backgroundColor: '#F06292', color: '#FFFFFF' }}
+            style={{ backgroundColor: '#C8287E', color: '#FFFFFF' }}
             variants={buttonVariants}
             whileHover="hover"
             whileTap={{ scale: 0.95 }}
@@ -214,7 +214,7 @@ const Navbar = () => {
               >
                 {link.name}
                 <motion.span
-                  className="absolute bottom-[-4px] left-0 w-full h-[2px] bg-[#F06292]"
+                  className="absolute bottom-[-4px] left-0 w-full h-[2px] bg-[#C8287E]"
                   variants={underlineVariants}
                   initial="hidden"
                   whileHover="hover"
@@ -229,7 +229,7 @@ const Navbar = () => {
             <motion.a
             href="#book-call"
             className="inline-flex items-center px-4 py-2 w-3/4 text-base sm:text-lg font-semibold rounded-full"
-            style={{ backgroundColor: '#F06292', color: '#FFFFFF' }}
+            style={{ backgroundColor: '#C8287E', color: '#FFFFFF' }}
             variants={buttonVariants}
             whileHover="hover"
             whileTap={{ scale: 0.95 }}
