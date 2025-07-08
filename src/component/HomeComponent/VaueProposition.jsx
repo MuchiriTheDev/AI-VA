@@ -6,53 +6,53 @@ const values = [
   {
     id: 1,
     title: 'Personalized VA Matching',
-    description: 'Based on your needs & goals, we pair you with the perfect VA.',
-    icon: <FaUserCheck className="text-sm sm:text-base md:text-lg" style={{ color: '#C8287E' }} aria-hidden="true" />,
+    description: 'Paired with the perfect VA for your needs.',
+    icon: <FaUserCheck className="text-xs sm:text-sm" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
   {
     id: 2,
     title: 'AI-Skilled VA',
-    description: 'Fully trained with advanced AI skills (ChatGPT, tools, automations).',
-    icon: <FaRobot className="text-sm sm:text-base md:text-lg" style={{ color: '#C8287E' }} aria-hidden="true" />,
+    description: 'Trained in AI tools and automations.',
+    icon: <FaRobot className="text-xs sm:text-sm" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
   {
     id: 3,
     title: 'Business & Personal Support',
-    description: 'Admin, marketing, lifestyle—your VA handles it all.',
-    icon: <FaBriefcase className="text-sm sm:text-base md:text-lg" style={{ color: '#C8287E' }} aria-hidden="true" />,
+    description: 'Handles admin, marketing, and more.',
+    icon: <FaBriefcase className="text-xs sm:text-sm" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
   {
     id: 4,
     title: 'Strategy & Onboarding',
-    description: 'Strategy calls + onboarding support with the founder.',
-    icon: <FaPhone className="text-sm sm:text-base md:text-lg" style={{ color: '#C8287E' }} aria-hidden="true" />,
+    description: 'Strategy calls with founder support.',
+    icon: <FaPhone className="text-xs sm:text-sm" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
   {
     id: 5,
     title: 'Weekly Check-Ins',
-    description: 'Regular updates to ensure everything’s on track.',
-    icon: <FaClock className="text-sm sm:text-base md:text-lg" style={{ color: '#C8287E' }} aria-hidden="true" />,
+    description: 'Regular updates to stay on track.',
+    icon: <FaClock className="text-xs sm:text-sm" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
 ];
 
 const bonuses = [
   {
     id: 6,
-    title: 'Dedicated Onboarding Concierge',
-    description: 'Personalized support to get you started seamlessly.',
-    icon: <FaConciergeBell className="text-sm sm:text-base md:text-lg" style={{ color: '#C8287E' }} aria-hidden="true" />,
+    title: 'Onboarding Concierge',
+    description: 'Personalized support to start.',
+    icon: <FaConciergeBell className="text-xs sm:text-sm" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
   {
     id: 7,
     title: 'VA Match Guarantee',
-    description: 'Not vibing? We’ll rematch at no extra cost.',
-    icon: <FaSyncAlt className="text-sm sm:text-base md:text-lg" style={{ color: '#C8287E' }} aria-hidden="true" />,
+    description: 'Free rematch if needed.',
+    icon: <FaSyncAlt className="text-xs sm:text-sm" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
   {
     id: 8,
     title: 'Flexible Pricing',
-    description: 'Custom packages tailored to your needs.',
-    icon: <FaDollarSign className="text-sm sm:text-base md:text-lg" style={{ color: '#C8287E' }} aria-hidden="true" />,
+    description: 'Custom packages for you.',
+    icon: <FaDollarSign className="text-xs sm:text-sm" style={{ color: '#C8287E' }} aria-hidden="true" />,
   },
 ];
 
@@ -62,32 +62,30 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.6,
+      duration: 0.5,
       when: 'beforeChildren',
-      staggerChildren: 0.2,
+      staggerChildren: 0.15,
     },
   },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20, scale: 0.95, rotate: 0 },
+  hidden: { opacity: 0, y: 15, scale: 0.97 },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
-    rotate: 0,
     transition: {
       type: 'spring',
-      stiffness: 180,
-      damping: 15,
-      duration: 0.4,
+      stiffness: 200,
+      damping: 12,
+      duration: 0.3,
     },
   },
   hover: {
-    scale: 1.03,
-    rotate: 1, // Subtle tilt for a professional yet dynamic effect
-    boxShadow: '0 4px 12px rgba(240, 98, 146, 0.3), 0 0 0 2px #C8287E',
-    transition: { duration: 0.2 },
+    scale: 1.02,
+    boxShadow: '0 3px 8px rgba(240, 98, 146, 0.2), 0 0 0 1px #C8287E',
+    transition: { duration: 0.15 },
   },
 };
 
@@ -95,10 +93,10 @@ const ValueProposition = () => {
   return (
     <section
       id="value-proposition"
-      className="w-full h-fit md:min-h-[80vh] h-fit py-8 sm:py-10 lg:py-12 bg-white relative"
+      className="w-full py-6 sm:py-8 bg-white relative"
     >
       <motion.div
-        className="w-full  px-4 sm:px-6 lg:px-8"
+        className="w-full px-4 sm:px-6"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -106,56 +104,56 @@ const ValueProposition = () => {
       >
         {/* Main Headline */}
         <motion.h2
-          className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 leading-tight text-center relative"
-          style={{ color: '#C8287E' }} // Pink 300
+          className="text-xl sm:text-3xl md:text-4xl font-bold mb-1 text-center"
+          style={{ color: '#C8287E' }}
           variants={itemVariants}
         >
-          AI-Trained. Business-Savvy. Personally Matched.
-          <span className="block w-32 h-1 mx-auto mt-2 bg-gradient-to-r from-[#C8287E] to-[#C8287E] rounded-full"></span>
+          AI-Trained. Business-Savvy.
+          <span className="block w-24 h-0.5 mx-auto mt-1 bg-gradient-to-r from-[#C8287E] to-[#C8287E] rounded-full"></span>
         </motion.h2>
 
         {/* Subheadline */}
         <motion.h3
-          className="text-sm font-bold sm:text-base font-semibold mb-8 text-center"
-          style={{ color: '#333333' }} // Purple 500
+          className="text-base sm:text-lg font-bold mb-6 text-center"
+          style={{ color: '#333333' }}
           variants={itemVariants}
         >
-          You get a mission-ready growth partner.
+          Your growth partner awaits.
         </motion.h3>
 
         {/* Two-Column Layout */}
-        <div className="flex flex-col gap-6 md:gap-8">
+        <div className="flex flex-col gap-4">
           {/* What's Included Section */}
-          <div className="flex-1">
+          <div>
             <motion.h4
-              className="text-sm sm:text-base md:text-lg font-semibold mb-4 text-center md:text-left"
-              style={{ color: '#C8287E' }} // Purple 500
+              className="text-base sm:text-lg font-bold mb-3 text-center"
+              style={{ color: '#C8287E' }}
               variants={itemVariants}
             >
               What’s Included:
             </motion.h4>
-            <div className="space-y-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {values.map((value) => (
                 <motion.div
                   key={value.id}
-                  className="bg-white p-4 sm:p-5 rounded-lg shadow-sm border-2 border-[#C8287E] bg-gradient-to-b from-gray-50 to-gray-100  hover:shadow-md transition-shadow duration-300 flex items-start"
+                  className="bg-white p-3 rounded-md shadow-sm border border-[#C8287E] bg-gradient-to-b from-gray-50 to-gray-100 hover:shadow transition-shadow duration-200 flex items-start"
                   variants={itemVariants}
                   initial="hidden"
                   whileInView="visible"
                   whileHover="hover"
                   viewport={{ once: true }}
                 >
-                  <div className="flex-shrink-0 mr-3">{value.icon}</div>
+                  <div className="flex-shrink-0 mr-2 mt-1">{value.icon}</div>
                   <div>
                     <h5
-                      className="text-sm sm:text-base md:text-lg font-semibold"
-                      style={{ color: '#C8287E' }} // Purple 500
+                      className="text-sm sm:text-base font-semibold"
+                      style={{ color: '#C8287E' }}
                     >
                       {value.title}
                     </h5>
                     <p
-                      className="text-sm sm:text-base leading-relaxed"
-                      style={{ color: '#333333' }} // Dark gray
+                      className="text-xs sm:text-sm leading-relaxed"
+                      style={{ color: '#333333' }}
                     >
                       {value.description}
                     </p>
@@ -166,36 +164,36 @@ const ValueProposition = () => {
           </div>
 
           {/* Your Bonus Support Section */}
-          <div className="flex-1">
+          <div>
             <motion.h4
-              className="text-sm sm:text-base md:text-lg font-semibold mb-4 text-center md:text-left"
-              style={{ color: '#C8287E' }} // Purple 500
+              className="text-base sm:text-lg font-bold mb-3 text-center"
+              style={{ color: '#C8287E' }}
               variants={itemVariants}
             >
               Your Bonus Support:
             </motion.h4>
-            <div className="space-y-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {bonuses.map((bonus) => (
                 <motion.div
                   key={bonus.id}
-                  className="bg-white p-4 sm:p-5 rounded-lg shadow-sm bg-gradient-to-b from-gray-50 to-gray-100  border-2 border-[#C8287E] hover:shadow-md transition-shadow duration-300 flex items-start"
+                  className="bg-white p-3 rounded-md shadow-sm border border-[#C8287E] bg-gradient-to-b from-gray-50 to-gray-100 hover:shadow transition-shadow duration-200 flex items-start"
                   variants={itemVariants}
                   initial="hidden"
                   whileInView="visible"
                   whileHover="hover"
                   viewport={{ once: true }}
                 >
-                  <div className="flex-shrink-0 mr-3">{bonus.icon}</div>
+                  <div className="flex-shrink-0 mr-2 mt-1">{bonus.icon}</div>
                   <div>
                     <h5
-                      className="text-sm sm:text-base md:text-lg font-semibold"
-                      style={{ color: '#C8287E' }} // Purple 500
+                      className="text-sm sm:text-base  font-semibold"
+                      style={{ color: '#C8287E' }}
                     >
                       {bonus.title}
                     </h5>
                     <p
-                      className="text-sm sm:text-base md:text-lg leading-relaxed"
-                      style={{ color: '#333333' }} // Dark gray
+                      className="text-xs sm:text-sm leading-relaxed"
+                      style={{ color: '#333333' }}
                     >
                       {bonus.description}
                     </p>
