@@ -6,21 +6,21 @@ const testimonials = [
   {
     id: 1,
     quote:
-      'Working with Caroline and the CNK VA Solutions team has been an absolute game changer for my business. Thanks to her leadership, my operations are smoother, my team is more organized, and I have the confidence to scale.',
+      'Working with Caroline and the AI Powered VAs Solutions team has been an absolute game changer for my business. Thanks to her leadership, my operations are smoother, my team is more organized, and I have the confidence to scale.',
     author: 'Martin Mwenda',
     title: `CEO Horizon Solutions`,
   },
   {
     id: 2,
     quote:
-      'The CNK team transformed my workflow. My VA handles everything from scheduling to content, letting me focus on growth.',
+      'The AI Powered VAs team transformed my workflow. My VA handles everything from scheduling to content, letting me focus on growth.',
     author: 'Sarah Johnson',
     title: 'Life Coach & Speaker',
   },
   {
     id: 3,
     quote:
-      'With CNK’s AI-powered VAs, I’ve saved countless hours and scaled my consulting business without stress.',
+      'With AI-powered VAs, I’ve saved countless hours and scaled my consulting business without stress.',
     author: 'Michael Chen',
     title: 'Business Consultant',
   },
