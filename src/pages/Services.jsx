@@ -6,6 +6,7 @@ const Services = () => {
   return (
     <div>
         <Navbar />
+        servbjyuggjbmb
         <Footer />
     </div>
   )
