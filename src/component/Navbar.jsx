@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useViewportScroll, useTransform } from 'framer-motion';
 import { FaBars, FaTimes, FaCalendarAlt } from 'react-icons/fa';
+import { useLocation } from 'react-router-dom'; // Import useLocation for page detection
 import { assets } from '../assets/assets';
 
 const navLinks = [
-  { id: 1, name: 'Home', href: '#home' },
-  { id: 2, name: 'Services', href: '#services' },
-  { id: 3, name: 'Pricing', href: '#pricing' },
-  { id: 4, name: 'Contact Us', href: '#contact' },
+  { id: 1, name: 'Home', href: '/' },
+  { id: 2, name: 'About', href: '/about' },
+  { id: 3, name: 'Services', href: '/services' },
+  { id: 4, name: 'Pricing', href: '/pricing' },
+  { id: 5, name: 'Contact Us', href: '/contact' },
 ];
 
 const containerVariants = {
@@ -86,30 +88,33 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { scrollY } = useViewportScroll();
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation(); // Get current page path
+  const isHomePage = location.pathname === '/'; // Check if on homepage
 
-  // Track scroll position and toggle background
+  // Track scroll position for homepage only
   useEffect(() => {
-    const unsubscribe = scrollY.onChange((y) => {
-      setIsScrolled(y > 100);
-    });
-    return () => unsubscribe();
-  }, [scrollY]);
+    if (isHomePage) {
+      const unsubscribe = scrollY.onChange((y) => {
+        setIsScrolled(y > 100);
+      });
+      return () => unsubscribe();
+    } else {
+      setIsScrolled(false); // No scroll effect on other pages
+    }
+  }, [scrollY, isHomePage]);
 
-  const backgroundColor = useTransform(
-    scrollY,
-    [0, 100],
-    ['rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 1)']
-  );
-  const textColor = useTransform(
-    scrollY,
-    [0, 100],
-    ['#FFFFFF', '#8E24AA'] // White to Purple 500
-  );
+  // Conditional background and text color based on page and scroll
+  const backgroundColor = isHomePage
+    ? useTransform(scrollY, [0, 100], ['rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 1)'])
+    : 'rgba(255, 255, 255, 1)';
+  const textColor = isHomePage
+    ? useTransform(scrollY, [0, 100], ['#FFFFFF', '#8E24AA'])
+    : '#8E24AA';
 
   return (
     <motion.nav
       className={`fixed top-0 left-0 w-full z-50 transition-shadow duration-300 ${
-        isScrolled ? 'shadow-md' : ''
+        isScrolled && isHomePage ? 'shadow-md' : ''
       }`}
       style={{ backgroundColor }}
       initial="hidden"
@@ -122,13 +127,13 @@ const Navbar = () => {
           <img
             src={assets.logo}
             alt="AI Empowered VAs logo"
-            className="h-16 w-fit" // White logo in transparent state
+            className="h-12 w-fit" // Reduced logo size for consistency
           />
         </motion.a>
 
         {/* Desktop Nav Links */}
-        <div className="hidden md:flex items-center wfull">
-          <ul className="flex space-x-11">
+        <div className="hidden md:flex items-center space-x-8">
+          <ul className="flex space-x-8">
             {navLinks.map((link) => (
               <motion.li
                 key={link.id}
@@ -138,7 +143,7 @@ const Navbar = () => {
               >
                 <motion.a
                   href={link.href}
-                  className="text-sm sm:text-base font-medium"
+                  className="text-sm font-medium"
                   style={{ color: textColor }}
                 >
                   {link.name}
@@ -153,23 +158,23 @@ const Navbar = () => {
             ))}
           </ul>
           {/* Book a Call Button (Desktop) */}
-        </div>
-        <motion.a
+          <motion.a
             href="https://zcal.co/carolinekabi/discovery-call-30min"
-            target='_blank'
-            className="hidden md:inline-flex items-center px-4 py-2 text-sm sm:text-base font-semibold rounded-full"
+            target="_blank"
+            className="inline-flex items-center px-4 py-2 text-sm font-semibold rounded-full"
             style={{ backgroundColor: '#C8287E', color: '#FFFFFF' }}
             variants={buttonVariants}
             whileHover="hover"
             whileTap={{ scale: 0.95 }}
           >
-            <FaCalendarAlt className="mr-2 text-sm sm:text-base" aria-hidden="true" />
+            <FaCalendarAlt className="mr-2 text-sm" aria-hidden="true" />
             Book a Call
-        </motion.a>
+          </motion.a>
+        </div>
 
         {/* Mobile Menu Toggle */}
         <motion.button
-          className="md:hidden text-base sm:text-lg"
+          className="md:hidden text-base"
           style={{ color: textColor }}
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? 'Close menu' : 'Open menu'}
@@ -182,14 +187,14 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <motion.div
-        className="md:hidden fixed top-0 right-0 w-3/4 max-w-xs h-full flex flex-col justify-between p-18 bg-white shadow-lg"
+        className="md:hidden fixed top-0 right-0 w-3/4 max-w-xs h-full flex flex-col justify-between p-6 bg-white shadow-lg"
         variants={mobileMenuVariants}
         initial="hidden"
         animate={isOpen ? 'visible' : 'hidden'}
       >
-        <div className="flex justify-end p-4">
+        <div className="flex justify-end">
           <motion.button
-            className="text-base sm:text-lg"
+            className="text-base"
             style={{ color: '#8E24AA' }}
             onClick={() => setIsOpen(false)}
             aria-label="Close menu"
@@ -209,7 +214,7 @@ const Navbar = () => {
             >
               <motion.a
                 href={link.href}
-                className="text-base sm:text-lg font-medium"
+                className="text-base font-medium"
                 style={{ color: '#8E24AA' }}
                 onClick={() => setIsOpen(false)}
               >
@@ -223,25 +228,22 @@ const Navbar = () => {
               </motion.a>
             </motion.li>
           ))}
-          {/* Book a Call Button (Mobile) */}
         </ul>
-        <div
-        className='flex justify-center items-center w-full gap-4 px-4 py-2'>
-            <motion.a
+        <div className="flex justify-center items-center w-full px-4 py-4">
+          <motion.a
             href="https://zcal.co/carolinekabi/discovery-call-30min"
-            target='_blank'
-            className="inline-flex items-center px-4 py-2 w-3/4 text-base sm:text-lg font-semibold rounded-full"
+            target="_blank"
+            className="inline-flex items-center px-4 py-2 w-3/4 text-base font-semibold rounded-full"
             style={{ backgroundColor: '#C8287E', color: '#FFFFFF' }}
             variants={buttonVariants}
             whileHover="hover"
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsOpen(false)}
           >
-            <FaCalendarAlt className="mr-2 text-base sm:text-lg" aria-hidden="true" />
+            <FaCalendarAlt className="mr-2 text-base" aria-hidden="true" />
             Book a Call
-        </motion.a>
+          </motion.a>
         </div>
-        
       </motion.div>
     </motion.nav>
   );
