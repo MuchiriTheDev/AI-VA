@@ -4,7 +4,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Pricing from './pages/Pricing'
 import ContactUs from './pages/ContactUs'
-import Services from './pages/services'
+import Services from './pages/Services'
 
 const App = () => {
   return (
