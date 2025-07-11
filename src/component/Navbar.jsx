@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useViewportScroll, useTransform } from 'framer-motion';
 import { FaBars, FaTimes, FaCalendarAlt } from 'react-icons/fa';
-import { useLocation } from 'react-router-dom'; // Import useLocation for page detection
+import { Link, useLocation } from 'react-router-dom'; // Import useLocation for page detection
 import { assets } from '../assets/assets';
 
 const navLinks = [
@@ -123,13 +123,13 @@ const Navbar = () => {
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-4">
         {/* Logo */}
-        <motion.a href="#" variants={linkVariants} whileHover={{ scale: 1.05 }}>
+        <Link to="#" variants={linkVariants} whileHover={{ scale: 1.05 }}>
           <img
             src={assets.logo}
             alt="AI Empowered VAs logo"
             className="h-12 w-fit" // Reduced logo size for consistency
           />
-        </motion.a>
+        </Link>
 
         {/* Desktop Nav Links */}
         <div className="hidden md:flex items-center space-x-8">
@@ -141,8 +141,8 @@ const Navbar = () => {
                 whileHover="hover"
                 className="relative"
               >
-                <motion.a
-                  href={link.href}
+                <Link
+                  to={link.href}
                   className="text-sm font-medium"
                   style={{ color: textColor }}
                 >
@@ -153,13 +153,13 @@ const Navbar = () => {
                     initial="hidden"
                     whileHover="hover"
                   />
-                </motion.a>
+                </Link>
               </motion.li>
             ))}
           </ul>
           {/* Book a Call Button (Desktop) */}
-          <motion.a
-            href="https://zcal.co/carolinekabi/discovery-call-30min"
+          <Link
+            to="https://zcal.co/carolinekabi/discovery-call-30min"
             target="_blank"
             className="inline-flex items-center px-4 py-2 text-sm font-semibold rounded-full"
             style={{ backgroundColor: '#C8287E', color: '#FFFFFF' }}
@@ -169,7 +169,7 @@ const Navbar = () => {
           >
             <FaCalendarAlt className="mr-2 text-sm" aria-hidden="true" />
             Book a Call
-          </motion.a>
+          </Link>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -212,8 +212,8 @@ const Navbar = () => {
               whileHover="hover"
               className="relative"
             >
-              <motion.a
-                href={link.href}
+              <Link
+                to={link.href}
                 className="text-base font-medium"
                 style={{ color: '#8E24AA' }}
                 onClick={() => setIsOpen(false)}
@@ -225,13 +225,13 @@ const Navbar = () => {
                   initial="hidden"
                   whileHover="hover"
                 />
-              </motion.a>
+              </Link>
             </motion.li>
           ))}
         </ul>
         <div className="flex justify-center items-center w-full px-4 py-4">
-          <motion.a
-            href="https://zcal.co/carolinekabi/discovery-call-30min"
+          <Link
+            to="https://zcal.co/carolinekabi/discovery-call-30min"
             target="_blank"
             className="inline-flex items-center px-4 py-2 w-3/4 text-base font-semibold rounded-full"
             style={{ backgroundColor: '#C8287E', color: '#FFFFFF' }}
@@ -242,7 +242,7 @@ const Navbar = () => {
           >
             <FaCalendarAlt className="mr-2 text-base" aria-hidden="true" />
             Book a Call
-          </motion.a>
+          </Link>
         </div>
       </motion.div>
     </motion.nav>

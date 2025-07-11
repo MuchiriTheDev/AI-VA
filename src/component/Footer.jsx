@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaEnvelope } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { assets } from '../assets/assets';
 
 const containerVariants = {
@@ -30,7 +30,7 @@ const itemVariants = {
   },
   hover: {
     scale: 1.1,
-    color: '#F06292', // Pink 300 on hover
+    color: '#a62066', // Darker shade of #C8287E for hover
     transition: { duration: 0.2 },
   },
 };
@@ -50,13 +50,17 @@ const Footer = () => {
       >
         {/* Brand Name */}
         <motion.a
-          href="#"
+          href="/"
           className="flex items-center justify-center mb-4 text-xl sm:text-2xl font-semibold"
-          style={{ color: '#F06292' }} // Pink 300
+          style={{ color: '#C8287E' }} // Primary color
           variants={itemVariants}
           whileHover={{ scale: 1.05 }}
         >
-         <img src={assets.logo} alt="AI Empowered VAs logo" className='w-fit h-16' />
+          <img
+            src={assets.logo}
+            alt="AI Empowered VAs logo"
+            className="w-fit h-16"
+          />
         </motion.a>
 
         {/* Copyright Notice */}
@@ -70,22 +74,38 @@ const Footer = () => {
 
         {/* Social Media Links */}
         <motion.ul
-          className="flex justify-center mt-4 space-x-5"
+          className="flex justify-center mt-4 space-x-6"
           variants={containerVariants}
         >
           {[
-            { href: '#', icon: <FaFacebookF size={22} className="text-sm sm:text-base" style={{ color: '#8E24AA' }} aria-hidden="true" /> },
-            { href: '#', icon: <FaInstagram size={22} className="text-sm sm:text-base" style={{ color: '#8E24AA' }} aria-hidden="true" /> },
-            { href: '#', icon: <FaTwitter size={22} className="text-sm sm:text-base" style={{ color: '#8E24AA' }} aria-hidden="true" /> },
-            { href: '#', icon: <FaLinkedinIn size={22} className="text-sm sm:text-base" style={{ color: '#8E24AA' }} aria-hidden="true" /> },
-            { href: '#', icon: <FaEnvelope size={22} className="text-sm sm:text-base" style={{ color: '#8E24AA' }} aria-hidden="true" /> },
+            {
+              href: 'https://www.facebook.com/share/16Rgb8vQFr/',
+              icon: <FaFacebookF size={22} className="text-sm sm:text-base" style={{ color: '#C8287E' }} aria-hidden="true" />,
+              label: 'Follow AI Empowered Virtual Assistants on Facebook',
+            },
+            {
+              href: 'https://www.instagram.com/aiempoweredvas?utm_source=qr&igsh=MWw2cHh3enhxb3ZjYg==',
+              icon: <FaInstagram size={22} className="text-sm sm:text-base" style={{ color: '#C8287E' }} aria-hidden="true" />,
+              label: 'Follow AI Empowered Virtual Assistants on Instagram',
+            },
+            {
+              href: 'https://www.linkedin.com/company/empoweredaiva/',
+              icon: <FaLinkedinIn size={22} className="text-sm sm:text-base" style={{ color: '#C8287E' }} aria-hidden="true" />,
+              label: 'Follow AI Empowered Virtual Assistants on LinkedIn',
+            },
           ].map((link, index) => (
             <motion.li
               key={index}
               variants={itemVariants}
               whileHover="hover"
             >
-              <a href={link.href} className="text-gray-500 hover:text-[#F06292]">
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:text-[#a62066]"
+                aria-label={link.label}
+              >
                 {link.icon}
               </a>
             </motion.li>
