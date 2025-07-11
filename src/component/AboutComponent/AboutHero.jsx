@@ -1,144 +1,99 @@
 import React from 'react';
+import { assets } from '../../assets/assets';
 import { motion } from 'framer-motion';
-import { FaRobot, FaUserCheck, FaSyncAlt, FaGlobeAfrica, FaCalendarAlt } from 'react-icons/fa';
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      when: 'beforeChildren',
-      staggerChildren: 0.2,
-    },
-  },
-};
+const AboutHero = () => {
+  // Animation variants for text
+  const textVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' } },
+  };
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20, scale: 0.95 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      type: 'spring',
-      stiffness: 180,
-      damping: 15,
-      duration: 0.4,
-    },
-  },
-  hover: {
-    scale: 1.05,
-    boxShadow: '0 4px 12px rgba(200, 40, 126, 0.3)', // Adjusted for #C8287E
-    transition: { duration: 0.2 },
-  },
-};
-
-const WhyChooseUs = () => {
-  const reasons = [
-    {
-      icon: <FaRobot className="text-2xl text-color" aria-hidden="true" />,
-      title: 'AI-Integrated Solutions',
-      description: 'Our VAs leverage AI tools to automate and optimize tasks, providing smarter support.',
-    },
-    {
-      icon: <FaUserCheck className="text-2xl text-color" aria-hidden="true" />,
-      title: 'Skilled & Trained Professionals',
-      description: 'Each VA undergoes rigorous training to ensure they meet our high standards.',
-    },
-    {
-      icon: <FaSyncAlt className="text-2xl text-color" aria-hidden="true" />,
-      title: 'Customized Support',
-      description: 'We match you with VAs that align with your specific needs and business goals.',
-    },
-    {
-      icon: <FaGlobeAfrica className="text-2xl text-color" aria-hidden="true" />,
-      title: 'Global Impact',
-      description: 'By partnering with us, you support skilled professionals in Kenya, fostering global economic growth.',
-    },
-  ];
+  // Animation variants for image/video
+  const mediaVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.9, ease: 'easeOut' } },
+  };
 
   return (
-    <section
-      id="why-choose-us"
-      className="w-full max-w-[100vw] min-h-[60vh] h-fit py-12 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden"
-    >
-      {/* Subtle Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#C8287E]/5 to-transparent opacity-30 z-0"></div>
+    <section className="relative min-h-screen bg-white flex items-center justify-center py-8 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Background Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#C8287E]/10 to-white opacity-50 z-0"></div>
 
-      <motion.div
-        className="max-w-6xl mx-auto text-center relative z-10"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
-        {/* Headline */}
-        <motion.h2
-          className="text-2xl sm:text-3xl md:text-4xl font-bold text-color mb-4 leading-tight"
-          variants={itemVariants}
-        >
-          Why Choose Us?
-          <span className="block w-32 h-1 mx-auto mt-3 bg-gradient-to-r from-[#C8287E] to-[#a62066] rounded-full"></span>
-        </motion.h2>
-
-        {/* Reasons Grid */}
+      <div className="relative max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-6 lg:gap-10 z-10">
+        {/* Left Content: Text */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-10"
-          variants={containerVariants}
+          className="lg:w-1/2 text-center lg:text-left"
+          initial="hidden"
+          animate="visible"
+          variants={textVariants}
         >
-          {reasons.map((reason, index) => (
-            <motion.div
-              key={index}
-              className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center"
-              variants={itemVariants}
-              whileHover="hover"
-            >
-              <div className="mb-4">{reason.icon}</div>
-              <h3 className="text-sm sm:text-base font-semibold text-color mb-3">{reason.title}</h3>
-              <p className="text-xs text-gray-600 leading-relaxed">{reason.description}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Transform Your Workflow */}
-        <motion.div
-          className="bg-gradient-to-r from-[#C8287E]/10 to-white rounded-lg shadow-lg p-8 max-w-3xl mx-auto mb-8"
-          variants={itemVariants}
-          whileHover="hover"
-        >
-          <h3 className="text-lg sm:text-xl font-semibold text-color mb-4">
-            Transform Your Workflow
-          </h3>
-          <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-            Imagine a day when your to-do list is managed, your clients are engaged, and your tasks are
-            handled—all without lifting a finger.{' '}
-            <span className="font-semibold text-color">Our VAs make this a reality.</span>
+          <h1 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">
+            Empower Your <span className="text-color">Business.</span> <br />
+            Reclaim Your <span className="text-color">Time.</span>
+          </h1>
+          <p className="text-xs sm:text-sm text-gray-600 mb-6 leading-relaxed max-w-md mx-auto lg:mx-0">
+            Stop juggling endless tasks. Our AI-powered virtual assistant handles the details, so you can focus on what matters most—growing your business.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <motion.button
+              className="relative bg-color text-white font-semibold py-2 px-6 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 bg-opacity-95 hover:bg-opacity-100 overflow-hidden"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              aria-label="Get Started with AI Virtual Assistant"
+            >
+              Book Now
+              <span className="absolute inset-0 rounded-full bg-white opacity-0 hover:opacity-10 transition-opacity duration-300"></span>
+            </motion.button>
+            <motion.a
+              href="#learn-more"
+              className="text-color font-semibold py-2 px-6 rounded-full border border-[#C8287E] hover:bg-color/10 transition-colors duration-300"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              aria-label="Learn More About Our Services"
+            >
+              Learn More
+            </motion.a>
+          </div>
         </motion.div>
 
-        {/* CTA */}
+        {/* Right Content: Visual Element */}
         <motion.div
-          className="flex flex-col items-center"
-          variants={itemVariants}
+          className="lg:w-1/2 flex justify-center"
+          initial="hidden"
+          animate="visible"
+          variants={mediaVariants}
         >
-          <h4 className="text-sm sm:text-base font-semibold text-gray-600 mb-4">
-            Ready to Get Started?
-          </h4>
-          <a
-            href="https://zcal.co/carolinekabi/discovery-call-30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-5 py-2 text-xs sm:text-sm font-semibold rounded-full bg-color text-white shadow-lg hover:bg-[#a62066] transition-colors duration-300"
-            aria-label="Book a discovery call to find your perfect virtual assistant with AI Empowered Virtual Assistants"
-          >
-            <FaCalendarAlt className="mr-2 text-xs sm:text-sm" aria-hidden="true" />
-            Schedule Your Call Now
-          </a>
+          <div className="relative group">
+            {/* Decorative Background Circle with Animation */}
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-br from-[#C8287E] to-[#a62066] opacity-20 rounded-full w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[450px] lg:h-[450px] transform translate-x-8 translate-y-8"
+              animate={{ rotate: 360, scale: [1, 1.05, 1] }}
+              transition={{ repeat: Infinity, duration: 10, ease: 'easeInOut' }}
+            ></motion.div>
+            {/* Image or Video */}
+            <div className="relative w-[280px] h-[360px] sm:w-[340px] sm:h-[440px] lg:w-[380px] lg:h-[480px] rounded-2xl shadow-2xl overflow-hidden group-hover:scale-105 transition-transform duration-500">
+              <img
+                src={assets.heroabout}
+                alt="AI-powered virtual assistant in action"
+                className="w-full h-full object-cover"
+              />
+              {/* Optional: Replace with video for landing page impact */}
+              {/* <video
+                src={assets.heroVideo}
+                autoPlay
+                loop
+                muted
+                className="w-full h-full object-cover"
+                aria-label="AI Virtual Assistant Demo"
+              /> */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#C8287E]/40 to-transparent opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
+            </div>
+          </div>
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 };
 
-export default WhyChooseUs;
+export default AboutHero;
