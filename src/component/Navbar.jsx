@@ -143,7 +143,7 @@ const Navbar = () => {
               >
                 <Link
                   to={link.href}
-                  className="text-sm font-medium"
+                  className={`text-sm font-medium ${isScrolled && isHomePage ? 'text-color2' : 'text-white'}`}
                   style={{ color: textColor }}
                 >
                   {link.name}
