@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaHeadset, FaTasks, FaShareAlt, FaUserClock, FaCalendarAlt } from 'react-icons/fa';
+import { FaHeadset, FaTasks, FaShareAlt, FaUserClock } from 'react-icons/fa';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -37,25 +37,25 @@ const itemVariants = {
 const ServicesHero = () => {
   const services = [
     {
-      icon: <FaHeadset className="text-3xl text-color" aria-hidden="true" />,
+      icon: <FaHeadset className="text-2xl text-color" aria-hidden="true" />,
       title: 'Customer Support Excellence',
       description:
         'Deliver exceptional customer experiences with our VAs managing your support channels, ensuring timely and empathetic responses.',
     },
     {
-      icon: <FaTasks className="text-3xl text-color" aria-hidden="true" />,
+      icon: <FaTasks className="text-2xl text-color" aria-hidden="true" />,
       title: 'Administrative Task Management',
       description:
         'From scheduling meetings to managing emails, our VAs streamline your daily operations, enhancing productivity.',
     },
     {
-      icon: <FaShareAlt className="text-3xl text-color" aria-hidden="true" />,
+      icon: <FaShareAlt className="text-2xl text-color" aria-hidden="true" />,
       title: 'Social Media & Content Management',
       description:
         'Our VAs handle your content calendar, create engaging posts, and repurpose existing content to maintain a consistent online presence.',
     },
     {
-      icon: <FaUserClock className="text-3xl text-color" aria-hidden="true" />,
+      icon: <FaUserClock className="text-2xl text-color" aria-hidden="true" />,
       title: 'AI-Enhanced Personal Assistance',
       description:
         'Beyond business tasks, our VAs assist with personal scheduling, travel arrangements, and more, all optimized with AI tools for efficiency.',
@@ -76,7 +76,7 @@ const ServicesHero = () => {
       >
         {/* Headline */}
         <motion.h1
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-color mb-4 leading-tight"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold text-color mb-4 leading-tight"
           variants={itemVariants}
         >
           Empower Your Business.{' '}
@@ -86,7 +86,7 @@ const ServicesHero = () => {
 
         {/* Subheadline */}
         <motion.p
-          className="text-sm sm:text-base text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto"
+          className="text-xs sm:text-sm text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto"
           variants={itemVariants}
         >
           We specialize in providing top-tier virtual assistant services that integrate{' '}
@@ -97,7 +97,7 @@ const ServicesHero = () => {
 
         {/* Services Grid */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2  gap-6 max-w-7xl mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-7xl mx-auto"
           variants={containerVariants}
         >
           {services.map((service, index) => (
@@ -108,13 +108,11 @@ const ServicesHero = () => {
               whileHover="hover"
             >
               <div className="mb-4">{service.icon}</div>
-              <h3 className="text-base sm:text-lg font-semibold text-color mb-3">{service.title}</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">{service.description}</p>
+              <h3 className="text-sm sm:text-base font-semibold text-color mb-3">{service.title}</h3>
+              <p className="text-xs text-gray-600 leading-relaxed">{service.description}</p>
             </motion.div>
           ))}
         </motion.div>
-
-       
       </motion.div>
     </section>
   );

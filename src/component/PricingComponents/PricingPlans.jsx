@@ -39,7 +39,7 @@ const PricingPlans = () => {
     {
       name: 'The Essentials',
       price: '$600/month',
-      icon: <FaSeedling className="text-4xl text-color" aria-hidden="true" />,
+      icon: <FaSeedling className="text-3xl text-color" aria-hidden="true" />,
       description: 'For solo founders ready to stop doing everything alone.',
       features: [
         'Dedicated VA trained in AI tools',
@@ -56,7 +56,7 @@ const PricingPlans = () => {
     {
       name: 'The Accelerator',
       price: '$800/month',
-      icon: <FaRocket className="text-4xl text-color" aria-hidden="true" />,
+      icon: <FaRocket className="text-3xl text-color" aria-hidden="true" />,
       description: 'For founders in motion who need proactive support.',
       features: [
         'Everything in Essentials, plus:',
@@ -73,7 +73,7 @@ const PricingPlans = () => {
     {
       name: 'The Executive',
       price: '$1,000/month',
-      icon: <FaCrown className="text-4xl text-color" aria-hidden="true" />,
+      icon: <FaCrown className="text-3xl text-color" aria-hidden="true" />,
       description: 'For leaders who want a second brain—not just a second set of hands.',
       features: [
         'Everything in Accelerator, plus:',
@@ -104,17 +104,17 @@ const PricingPlans = () => {
       >
         {/* Headline */}
         <motion.h1
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4 leading-tight"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 leading-tight"
           variants={itemVariants}
         >
           Strategic Support.{' '}
-          <span className="itali  text-color">Flat Monthly Rates. No Surprises.</span>
+          <span className="italic text-color">Flat Monthly Rates. No Surprises.</span>
           <span className="block w-32 h-1 mx-auto mt-3 text-color rounded-full"></span>
         </motion.h1>
 
         {/* Subheadline */}
         <motion.p
-          className="text-sm sm:text-base text-gray-600 mb-10 leading-relaxed max-w-5xl mx-auto"
+          className="text-xs sm:text-sm text-gray-600 mb-10 leading-relaxed max-w-5xl mx-auto"
           variants={itemVariants}
         >
           We don’t charge by the hour—because what you really want is{' '}
@@ -138,24 +138,23 @@ const PricingPlans = () => {
               whileHover="hover"
             >
               {plan.isPopular && (
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-color text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center">
-                  <FaStar className="mr-1" aria-hidden="true" /> Most Popular
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-color text-white text-[10px] font-semibold px-2 py-1 rounded-full flex items-center">
+                  <FaStar className="mr-1 text-xs" aria-hidden="true" /> Most Popular
                 </div>
               )}
               <div className="mb-4">{plan.icon}</div>
-              <h3 className="text-xl sm:text-2xl font-semibold text-color mb-2">{plan.name}</h3>
-              <p className="text-2xl sm:text-3xl font-bold text-gray-600 mb-4">{plan.price}</p>
-              <p className="text-sm text-gray-600 mb-6 leading-relaxed">{plan.description}</p>
-              <ul className="text-sm text-gray-600 mb-6 flex-grow">
+              <h3 className="text-lg sm:text-xl font-semibold text-color mb-2">{plan.name}</h3>
+              <p className="text-xl sm:text-2xl font-bold text-gray-600 mb-4">{plan.price}</p>
+              <p className="text-xs text-gray-600 mb-6 leading-relaxed">{plan.description}</p>
+              <ul className="text-xs text-gray-600 mb-6 flex-grow">
                 {plan.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start mb-2">
-                    <FaCheckCircle className="text-color mr-2 mt-1" aria-hidden="true" />
+                    <FaCheckCircle className="text-color mr-2 mt-1 text-sm" aria-hidden="true" />
                     <span>{feature}</span>
                   </li>
                 ))}
               </ul>
-              <p className="text-xs sm:text-sm text-gray-500 italic mb-6">{plan.bestFor}</p>
-             
+              <p className="text-[10px] sm:text-xs text-gray-500 italic mb-6">{plan.bestFor}</p>
             </motion.div>
           ))}
         </motion.div>

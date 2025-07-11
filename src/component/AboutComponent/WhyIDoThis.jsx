@@ -19,19 +19,19 @@ const WhyIDoThis = () => {
 
         {/* Right Content: Text */}
         <div className="md:w-2/3 text-left">
-          <h2 className="text-2xl sm:text-3xl font-bold text-color mb-3">
+          <h2 className="text-xl sm:text-2xl font-bold text-color mb-3">
             Why I Do This Work
           </h2>
-          <p className="text-sm sm:text-base text-gray-600 mb-3 leading-relaxed max-w-md mx-auto md:mx-0">
+          <p className="text-xs sm:text-sm text-gray-600 mb-3 leading-relaxed max-w-md mx-auto md:mx-0">
             I built this agency to solve two problems at once:
           </p>
-          <p className="text-sm sm:text-base text-gray-600 mb-3 leading-relaxed max-w-md mx-auto md:mx-0">
+          <p className="text-xs sm:text-sm text-gray-600 mb-3 leading-relaxed max-w-md mx-auto md:mx-0">
             Founders, especially women of color, deserve <span className="font-semibold text-color">high-level support</span> that empowers them to move forward—not just stay afloat.
           </p>
-          <p className="text-sm sm:text-base text-gray-600 mb-3 leading-relaxed max-w-md mx-auto md:mx-0">
+          <p className="text-xs sm:text-sm text-gray-600 mb-3 leading-relaxed max-w-md mx-auto md:mx-0">
             Talented, hardworking professionals in Kenya deserve access to <span className="font-semibold text-color">remote work</span> that honors their intelligence, trains them for the future, and frees them from grueling commutes.
           </p>
-          <p className="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed max-w-md mx-auto md:mx-0 mb-5">
+          <p className="text-xs sm:text-sm text-gray-600 mb-4 leading-relaxed max-w-md mx-auto md:mx-0 mb-5">
             Here, we create that bridge. <br />
             <span className="font-semibold text-color">One founder. One VA. One transformation at a time.</span>
           </p>
@@ -39,7 +39,7 @@ const WhyIDoThis = () => {
             href="https://zcal.co/carolinekabi/discovery-call-30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-5 py-2 text-sm font-semibold rounded-full bg-color text-white shadow-md hover:bg-[#a62066] transition-colors duration-300"
+            className="inline-flex items-center px-4 py-1.5 text-xs sm:text-sm font-semibold rounded-full bg-color text-white shadow-md hover:bg-[#a62066] transition-colors duration-300"
             aria-label="Book a discovery call to learn about AI Empowered Virtual Assistants"
           >
             Reach Out to Learn More

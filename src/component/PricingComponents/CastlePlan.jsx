@@ -62,21 +62,21 @@ const CastlePlan = () => {
           variants={itemVariants}
           whileHover="hover"
         >
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-color text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center">
-            <FaHome className="mr-1" aria-hidden="true" /> Premium Plan
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-color text-white text-[10px] font-semibold px-2 py-1 rounded-full flex items-center">
+            <FaHome className="mr-1 text-xs" aria-hidden="true" /> Premium Plan
           </div>
-          <FaHome className="text-4xl text-color mb-4 mx-auto" aria-hidden="true" />
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-color mb-2">
+          <FaHome className="text-3xl text-color mb-4 mx-auto" aria-hidden="true" />
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-color mb-2">
             The Castle – Custom Quote
           </h2>
-          <p className="text-sm sm:text-base text-gray-600 mb-6 leading-relaxed">
+          <p className="text-xs sm:text-sm text-gray-600 mb-6 leading-relaxed">
             For multi-brand founders, teams, and VIPs who need{' '}
             <span className="font-semibold text-color">layered support</span>.
           </p>
-          <ul className="text-sm text-gray-600 mb-6">
+          <ul className="text-xs text-gray-600 mb-6">
             {castleFeatures.map((feature, idx) => (
               <li key={idx} className="flex items-start mb-2">
-                <FaCheckCircle className="text-color mr-2 mt-1" aria-hidden="true" />
+                <FaCheckCircle className="text-color mr-2 mt-1 text-sm" aria-hidden="true" />
                 <span>{feature}</span>
               </li>
             ))}
@@ -85,10 +85,10 @@ const CastlePlan = () => {
             to="https://zcal.co/carolinekabi/discovery-call-30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 text-sm sm:text-base font-semibold rounded-full bg-color text-white shadow-md hover:bg-[#a62066] transition-colors duration-300"
+            className="inline-flex items-center px-5 py-2 text-xs sm:text-sm font-semibold rounded-full bg-color text-white shadow-md hover:bg-[#a62066] transition-colors duration-300"
             aria-label="Book a strategy call to explore The Castle custom pricing plan with AI Empowered Virtual Assistants"
           >
-            <FaCalendarAlt className="mr-2 text-sm sm:text-base" aria-hidden="true" />
+            <FaCalendarAlt className="mr-2 text-xs sm:text-sm" aria-hidden="true" />
             Book a Strategy Call
           </Link>
         </motion.div>
@@ -98,10 +98,10 @@ const CastlePlan = () => {
           className="max-w-3xl mx-auto"
           variants={containerVariants}
         >
-          <h3 className="text-xl sm:text-2xl font-semibold text-color mb-4">
+          <h3 className="text-lg sm:text-xl font-semibold text-color mb-4">
             Not Sure Where You Fit?
           </h3>
-          <p className="text-sm sm:text-base text-gray-600 mb-6 leading-relaxed">
+          <p className="text-xs sm:text-sm text-gray-600 mb-6 leading-relaxed">
             We’ll help you choose the right level of support for where you are and where you’re going.{' '}
             <span className="font-semibold text-color">
               Every plan includes onboarding, founder support, and a full-time VA matched just for you.
@@ -110,26 +110,26 @@ const CastlePlan = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="mailto:info@empoweredaiva.com"
-              className="inline-flex items-center px-6 py-3 text-sm sm:text-base font-semibold rounded-full bg-white border border-[#C8287E] text-color shadow-md hover:bg-[#C8287E]/10 transition-colors duration-300"
+              className="inline-flex items-center px-5 py-2 text-xs sm:text-sm font-semibold rounded-full bg-white border border-[#C8287E] text-color shadow-md hover:bg-[#C8287E]/10 transition-colors duration-300"
               variants={itemVariants}
               whileHover="hover"
               whileTap={{ scale: 0.95 }}
               aria-label="Contact AI Empowered Virtual Assistants via email for pricing questions"
             >
-              <FaEnvelope className="mr-2 text-sm sm:text-base" aria-hidden="true" />
+              <FaEnvelope className="mr-2 text-xs sm:text-sm" aria-hidden="true" />
               Contact Us Directly
             </Link>
             <Link
               to="https://zcal.co/carolinekabi/discovery-call-30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 text-sm sm:text-base font-semibold rounded-full bg-color text-white shadow-md hover:bg-[#a62066] transition-colors duration-300"
+              className="inline-flex items-center px-5 py-2 text-xs sm:text-sm font-semibold rounded-full bg-color text-white shadow-md hover:bg-[#a62066] transition-colors duration-300"
               variants={itemVariants}
               whileHover="hover"
               whileTap={{ scale: 0.95 }}
               aria-label="Book a free discovery call to find the right virtual assistant plan with AI Empowered Virtual Assistants"
             >
-              <FaCalendarAlt className="mr-2 text-sm sm:text-base" aria-hidden="true" />
+              <FaCalendarAlt className="mr-2 text-xs sm:text-sm" aria-hidden="true" />
               Book a Free Discovery Call
             </Link>
           </div>

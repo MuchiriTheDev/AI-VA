@@ -23,10 +23,10 @@ const WhoWeServe = () => {
   return (
     <section className="bg-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold text-color mb-6">
+        <h2 className="text-xl sm:text-2xl font-bold text-color mb-6">
           Who We Serve
         </h2>
-        <p className="text-sm sm:text-base text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+        <p className="text-xs sm:text-sm text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
           You come to us feeling stretched, unfocused, and behind. You leave with systems that work, tasks that get done, and a VA you never want to let go.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
@@ -35,10 +35,10 @@ const WhoWeServe = () => {
               key={index}
               className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300"
             >
-              <h3 className="text-base sm:text-lg font-semibold text-color mb-3">
+              <h3 className="text-sm sm:text-base font-semibold text-color mb-3">
                 {audience.title}
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-xs text-gray-600 leading-relaxed">
                 {audience.description}
               </p>
             </div>

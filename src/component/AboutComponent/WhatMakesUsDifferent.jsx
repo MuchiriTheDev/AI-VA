@@ -27,28 +27,27 @@ const WhatMakesUsDifferent = () => {
   return (
     <section className="bg-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold text-color mb-6">
+        <h2 className="text-xl sm:text-2xl font-bold text-color mb-6">
           What Makes Us Different
         </h2>
-        <p className="text-sm sm:text-base text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+        <p className="text-xs sm:text-sm text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
           We’re not just a virtual assistant agency. We’re your partners in transformation.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6  mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
           {features.map((feature, index) => (
             <div
               key={index}
               className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300"
             >
-              <h3 className="text-base sm:text-lg font-semibold text-color mb-3">
+              <h3 className="text-sm sm:text-base font-semibold text-color mb-3">
                 {feature.title}
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-xs text-gray-600 leading-relaxed">
                 {feature.description}
               </p>
             </div>
           ))}
         </div>
-        
       </div>
     </section>
   );

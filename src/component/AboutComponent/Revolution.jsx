@@ -67,7 +67,7 @@ const Revolution = () => {
       >
         {/* Headline */}
         <motion.h2
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-color mb-4 leading-tight"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold text-color mb-4 leading-tight"
           variants={itemVariants}
         >
           This Isn’t Just Delegation. It’s a{' '}
@@ -77,7 +77,7 @@ const Revolution = () => {
 
         {/* Subheadline */}
         <motion.p
-          className="text-sm sm:text-base text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto"
+          className="text-xs sm:text-sm text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto"
           variants={itemVariants}
         >
           We’re redefining how <span className="font-semibold text-color">founders lead</span>, how{' '}
@@ -91,7 +91,7 @@ const Revolution = () => {
           variants={itemVariants}
           whileHover="hover"
         >
-          <p className="text-sm sm:text-base font-semibold text-gray-600 leading-relaxed">
+          <p className="text-xs sm:text-sm font-semibold text-gray-600 leading-relaxed">
             Ready to have the right person beside you—thinking ahead, executing boldly, and freeing you
             to do your <span className="text-color">best work</span>?
           </p>
@@ -106,24 +106,24 @@ const Revolution = () => {
             href="https://zcal.co/carolinekabi/discovery-call-30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 text-sm sm:text-base font-semibold rounded-full bg-color text-white shadow-lg"
+            className="inline-flex items-center px-5 py-2 text-xs sm:text-sm font-semibold rounded-full bg-color text-white shadow-lg"
             variants={itemVariants}
             whileHover="hover"
             whileTap={{ scale: 0.95 }}
             aria-label="Book a discovery call to join the revolution with AI Empowered Virtual Assistants"
           >
-            <FaCalendarAlt className="mr-2 text-sm sm:text-base" aria-hidden="true" />
+            <FaCalendarAlt className="mr-2 text-xs sm:text-sm" aria-hidden="true" />
             Book Your Discovery Call
           </motion.a>
           <motion.a
             href="mailto:info@empoweredaiva.com"
-            className="inline-flex items-center px-6 py-3 text-sm sm:text-base font-semibold rounded-full bg-white border border-[#C8287E] text-color shadow-lg"
+            className="inline-flex items-center px-5 py-2 text-xs sm:text-sm font-semibold rounded-full bg-white border border-[#C8287E] text-color shadow-lg"
             variants={linkVariants}
             whileHover="hover"
             whileTap={{ scale: 0.95 }}
             aria-label="Contact AI Empowered Virtual Assistants via email"
           >
-            <FaEnvelope className="mr-2 text-sm sm:text-base" aria-hidden="true" />
+            <FaEnvelope className="mr-2 text-xs sm:text-sm" aria-hidden="true" />
             Contact Us
           </motion.a>
         </motion.div>

@@ -37,22 +37,22 @@ const itemVariants = {
 const WhyChooseUs = () => {
   const reasons = [
     {
-      icon: <FaRobot className="text-3xl text-color" aria-hidden="true" />,
+      icon: <FaRobot className="text-2xl text-color" aria-hidden="true" />,
       title: 'AI-Integrated Solutions',
       description: 'Our VAs leverage AI tools to automate and optimize tasks, providing smarter support.',
     },
     {
-      icon: <FaUserCheck className="text-3xl text-color" aria-hidden="true" />,
+      icon: <FaUserCheck className="text-2xl text-color" aria-hidden="true" />,
       title: 'Skilled & Trained Professionals',
       description: 'Each VA undergoes rigorous training to ensure they meet our high standards.',
     },
     {
-      icon: <FaSyncAlt className="text-3xl text-color" aria-hidden="true" />,
+      icon: <FaSyncAlt className="text-2xl text-color" aria-hidden="true" />,
       title: 'Customized Support',
       description: 'We match you with VAs that align with your specific needs and business goals.',
     },
     {
-      icon: <FaGlobeAfrica className="text-3xl text-color" aria-hidden="true" />,
+      icon: <FaGlobeAfrica className="text-2xl text-color" aria-hidden="true" />,
       title: 'Global Impact',
       description: 'By partnering with us, you support skilled professionals in Kenya, fostering global economic growth.',
     },
@@ -75,7 +75,7 @@ const WhyChooseUs = () => {
       >
         {/* Headline */}
         <motion.h2
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-color mb-4 leading-tight"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold text-color mb-4 leading-tight"
           variants={itemVariants}
         >
           Why Choose Us?
@@ -84,7 +84,7 @@ const WhyChooseUs = () => {
 
         {/* Reasons Grid */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-9xl mx-auto mb-10"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-10"
           variants={containerVariants}
         >
           {reasons.map((reason, index) => (
@@ -95,8 +95,8 @@ const WhyChooseUs = () => {
               whileHover="hover"
             >
               <div className="mb-4">{reason.icon}</div>
-              <h3 className="text-base sm:text-lg font-semibold text-color mb-3">{reason.title}</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">{reason.description}</p>
+              <h3 className="text-sm sm:text-base font-semibold text-color mb-3">{reason.title}</h3>
+              <p className="text-xs text-gray-600 leading-relaxed">{reason.description}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -107,10 +107,10 @@ const WhyChooseUs = () => {
           variants={itemVariants}
           whileHover="hover"
         >
-          <h3 className="text-xl sm:text-2xl font-semibold text-color mb-4">
+          <h3 className="text-lg sm:text-xl font-semibold text-color mb-4">
             Transform Your Workflow
           </h3>
-          <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+          <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
             Imagine a day when your to-do list is managed, your clients are engaged, and your tasks are
             handled—all without lifting a finger.{' '}
             <span className="font-semibold text-color">Our VAs make this a reality.</span>
@@ -122,17 +122,17 @@ const WhyChooseUs = () => {
           className="flex flex-col items-center"
           variants={itemVariants}
         >
-          <h4 className="text-base sm:text-lg font-semibold text-gray-600 mb-4">
+          <h4 className="text-sm sm:text-base font-semibold text-gray-600 mb-4">
             Ready to Get Started?
           </h4>
           <a
             href="https://zcal.co/carolinekabi/discovery-call-30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 text-sm sm:text-base font-semibold rounded-full bg-color text-white shadow-lg hover:bg-[#a62066] transition-colors duration-300"
+            className="inline-flex items-center px-5 py-2 text-xs sm:text-sm font-semibold rounded-full bg-color text-white shadow-lg hover:bg-[#a62066] transition-colors duration-300"
             aria-label="Book a discovery call to find your perfect virtual assistant with AI Empowered Virtual Assistants"
           >
-            <FaCalendarAlt className="mr-2 text-sm sm:text-base" aria-hidden="true" />
+            <FaCalendarAlt className="mr-2 text-xs sm:text-sm" aria-hidden="true" />
             Schedule Your Call Now
           </a>
         </motion.div>
