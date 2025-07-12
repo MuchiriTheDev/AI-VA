@@ -358,7 +358,7 @@ const ContactUs = () => {
             <p className="text-sm text-gray-600 mt-4 text-center">
               Prefer to reach out directly? Email us at:{' '}
               <a
-                to="mailto:info@empowerthevais.com"
+                to="mailto:info@empoweredaivas.com"
                 className="text-color hover:underline"
                 aria-label="Email AI Empowered Virtual Assistants directly"
               >

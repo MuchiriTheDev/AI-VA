@@ -58,7 +58,7 @@ const TermsOfService = () => {
       className="w-full max-w-[100vw] min-h-[80vh] h-fit py-12 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden"
     >
       {/* Subtle Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#C8287E]/5 to-transparent opacity-30 z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-color/5 to-transparent opacity-30 z-0"></div>
 
       <motion.div
         className="max-w-4xl mx-auto text-left relative z-10"
@@ -74,7 +74,7 @@ const TermsOfService = () => {
         >
           <Link
             to="/"
-            className="inline-flex items-center text-[0.65rem] sm:text-xs text-[#C8287E] hover:underline"
+            className="inline-flex items-center text-[0.65rem] sm:text-xs text-color hover:underline"
             aria-label="Return to homepage"
           >
             <FaHome className="mr-2 text-[0.65rem] sm:text-xs" aria-hidden="true" />
@@ -84,11 +84,11 @@ const TermsOfService = () => {
 
         {/* Headline */}
         <motion.h1
-          className="text-xl sm:text-2xl md:text-3xl font-bold text-[#C8287E] mb-4"
+          className="text-xl sm:text-2xl md:text-3xl font-bold text-color mb-4"
           variants={itemVariants}
         >
           Terms and Conditions
-          <span className="block w-32 h-1 mt-3 bg-gradient-to-r from-[#C8287E] to-[#a62066] rounded-full"></span>
+          <span className="block w-32 h-1 mt-3 bg-gradient-to-r from-color to-[#a62066] rounded-full"></span>
         </motion.h1>
 
         {/* Table of Contents */}
@@ -96,7 +96,7 @@ const TermsOfService = () => {
           className="bg-gray-50 rounded-lg p-6 mb-8 shadow-sm"
           variants={itemVariants}
         >
-          <h2 className="text-base sm:text-lg font-semibold text-[#C8287E] mb-4">Table of Contents</h2>
+          <h2 className="text-base sm:text-lg font-semibold text-color mb-4">Table of Contents</h2>
           <ul className="list-none space-y-2">
             {sections.map((section, index) => (
               <motion.li
@@ -106,7 +106,7 @@ const TermsOfService = () => {
               >
                 <a
                   href={`#${section.id}`}
-                  className="text-[0.65rem] sm:text-xs text-gray-600 hover:text-[#C8287E] transition-colors duration-200"
+                  className="text-[0.65rem] sm:text-xs text-gray-600 hover:text-color transition-colors duration-200"
                   aria-label={`Jump to ${section.title}`}
                 >
                   {index + 1}. {section.title}
@@ -126,7 +126,7 @@ const TermsOfService = () => {
             href="https://empoweredaiva.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#C8287E] hover:underline"
+            className="text-color hover:underline"
             aria-label="Visit AI Empowered VAs website"
           >
             https://empoweredaiva.com/
@@ -134,7 +134,7 @@ const TermsOfService = () => {
           (the "Site") and the services provided by AI Empowered VAs ("Company," "we," "us," or "our"). Please read these Terms carefully before using the Site. By accessing or using the Site, you agree to be bound by these Terms and our{' '}
           <Link
             to="/privacy-policy"
-            className="text-[#C8287E] hover:underline"
+            className="text-color hover:underline"
             aria-label="View Privacy Policy"
           >
             Privacy Policy
@@ -144,14 +144,14 @@ const TermsOfService = () => {
         {/* Terms Sections */}
         <motion.div className="space-y-12" variants={containerVariants}>
           <motion.section id="overview" variants={itemVariants} className="border-t border-gray-200 pt-6">
-            <h2 className="text-base sm:text-lg font-semibold text-[#C8287E] mb-3">1. Website and Services Overview</h2>
+            <h2 className="text-base sm:text-lg font-semibold text-color mb-3">1. Website and Services Overview</h2>
             <p className="text-[0.65rem] sm:text-xs text-gray-600 leading-relaxed">
               AI Empowered VAs is a virtual assistant agency providing administrative support, project management, customer service, and strategic business solutions with an AI-enhanced approach. We offer service packages and custom solutions to support founders, entrepreneurs, and growing businesses.
             </p>
           </motion.section>
 
           <motion.section id="use" variants={itemVariants} className="border-t border-gray-200 pt-6">
-            <h2 className="text-base sm:text-lg font-semibold text-[#C8287E] mb-3">2. Use of the Website</h2>
+            <h2 className="text-base sm:text-lg font-semibold text-color mb-3">2. Use of the Website</h2>
             <p className="text-[0.65rem] sm:text-xs text-gray-600 leading-relaxed">
               You may use this Site for lawful purposes only. You agree not to use the Site:
             </p>
@@ -167,7 +167,7 @@ const TermsOfService = () => {
           </motion.section>
 
           <motion.section id="intellectual-property" variants={itemVariants} className="border-t border-gray-200 pt-6">
-            <h2 className="text-base sm:text-lg font-semibold text-[#C8287E] mb-3">3. Intellectual Property</h2>
+            <h2 className="text-base sm:text-lg font-semibold text-color mb-3">3. Intellectual Property</h2>
             <p className="text-[0.65rem] sm:text-xs text-gray-600 leading-relaxed">
               All content on this Site, including but not limited to text, graphics, logos, icons, images, videos, and digital downloads, is the property of AI Empowered VAs and is protected by copyright, trademark, and other intellectual property laws. You may not reproduce, duplicate, copy, sell, resell, or exploit any portion of the Site or its content without express written permission.
             </p>
@@ -257,7 +257,7 @@ const TermsOfService = () => {
                 href="https://empoweredaiva.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#C8287E] hover:underline"
+                className="text-color hover:underline"
                 aria-label="Visit AI Empowered VAs website"
               >
                 https://empoweredaiva.com/
@@ -276,7 +276,7 @@ const TermsOfService = () => {
             href="https://zcal.co/carolinekabi/discovery-call-30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-5 py-1.5 text-xs sm:text-sm font-semibold rounded-full bg-[#C8287E] text-white shadow-md hover:bg-[#a62066] transition-colors duration-300"
+            className="inline-flex items-center px-5 py-1.5 text-xs sm:text-sm font-semibold rounded-full bg-color text-white shadow-md hover:bg-[#a62066] transition-colors duration-300"
             variants={itemVariants}
             whileHover="hover"
             whileTap={{ scale: 0.95 }}
