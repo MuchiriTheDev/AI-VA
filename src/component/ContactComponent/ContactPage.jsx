@@ -218,9 +218,8 @@ const ContactUs = () => {
                   aria-label="Your location"
                 >
                   <option value="">Select a location</option>
-                  <option value="Other">Other (please specify)</option>
-                  <option value="CA">California</option>
-                  <option value="NY">New York</option>
+                  <option value="US">US</option>
+                  <option value="Other">Others</option>
                   {/* Add more states or handle dynamically */}
                 </select>
                 {formData.location === 'Other' && (
@@ -399,7 +398,7 @@ const ContactUs = () => {
           >
             <div className="w-40 h-40 md:w-48 md:h-48 bg-gray-200 rounded-full overflow-hidden mb-6 border-2 border-[#C8287E]">
               <img
-                src={assets.caroline}
+                src={assets.dp}
                 alt="Caroline, Founder of AI Empowered Virtual Assistants"
                 className="w-full h-full object-cover"
               />
@@ -419,49 +418,8 @@ const ContactUs = () => {
             <p className='italic text-sm text-gray-600 mb-6 text-center'>
               Founder & VA Strategist
             </p>
-            <div className="flex gap-6 mb-6">
-              <a
-                to="https://www.linkedin.com/company/empoweredaiva/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-color hover:text-[#a62066] transition-colors duration-300"
-                aria-label="Follow AI Empowered Virtual Assistants on LinkedIn"
-              >
-                <FaLinkedin className="text-2xl md:text-3xl" aria-hidden="true" />
-              </a>
-              <a
-                to="https://www.facebook.com/share/16Rgb8vQFr/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-color hover:text-[#a62066] transition-colors duration-300"
-                aria-label="Follow AI Empowered Virtual Assistants on Facebook"
-              >
-                <FaFacebook className="text-2xl md:text-3xl" aria-hidden="true" />
-              </a>
-              <a
-                to="https://www.instagram.com/aiempoweredvas?utm_source=qr&igsh=MWw2cHh3enhxb3ZjYg=="
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-color hover:text-[#a62066] transition-colors duration-300"
-                aria-label="Follow AI Empowered Virtual Assistants on Instagram"
-              >
-                <FaInstagram className="text-2xl md:text-3xl" aria-hidden="true" />
-              </a>
-            </div>
-            <div className="flex flex-col sm:flex-row items-center gap-4 text-sm text-gray-600">
-              <p className="flex items-center">
-                <FaClock className="text-color mr-2" aria-hidden="true" />
-                <span>
-                  <span className="font-semibold">Response Time:</span> Within 1 business day
-                </span>
-              </p>
-              <p className="flex items-center">
-                <FaLock className="text-color mr-2" aria-hidden="true" />
-                <span>
-                  <span className="font-semibold">Your information</span> is kept private
-                </span>
-              </p>
-            </div>
+            
+          
           </motion.div>
 
           {/* Why This Partnership Matters */}
@@ -515,7 +473,7 @@ const ContactUs = () => {
               to="https://zcal.co/carolinekabi/discovery-call-30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-3 text-base font-semibold rounded-full bg-color text-white shadow-md hover:bg-[#a62066] transition-colors duration-300"
+              className="inline-flex items-center px-6 py-3 text-sm font-semibold rounded-full bg-color text-white shadow-md hover:bg-[#a62066] transition-colors duration-300"
               variants={itemVariants}
               whileHover="hover"
               whileTap={{ scale: 0.95 }}
