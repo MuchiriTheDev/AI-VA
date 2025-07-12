@@ -1,6 +1,7 @@
 import React from 'react';
 import { assets } from '../../assets/assets';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const AboutHero = () => {
   // Animation variants for text
@@ -36,7 +37,8 @@ const AboutHero = () => {
             Stop juggling endless tasks. Our AI-powered virtual assistant handles the details, so you can focus on what matters most—growing your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <motion.button
+            <Link
+              to={'"https://zcal.co/carolinekabi/discovery-call-30min'}
               className="relative bg-color text-white font-semibold py-2 px-6 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 bg-opacity-95 hover:bg-opacity-100 overflow-hidden"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
@@ -44,7 +46,7 @@ const AboutHero = () => {
             >
               Book Now
               <span className="absolute inset-0 rounded-full bg-white opacity-0 hover:opacity-10 transition-opacity duration-300"></span>
-            </motion.button>
+            </Link>
            
           </div>
         </motion.div>
