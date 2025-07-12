@@ -70,7 +70,7 @@ const Revolution = () => {
           className="text-2xl sm:text-3xl md:text-4xl font-bold text-color mb-4 leading-tight"
           variants={itemVariants}
         >
-          This Isn’t Just Delegation. It’s a{' '}
+          This Isn’t Just <span className='italic'>Delegation.</span>  It’s a{' '}
           <span className="italic text-[#a62066]">Revolution</span>.
           <span className="block w-32 h-1 mx-auto mt-3 bg-gradient-to-r from-[#C8287E] to-[#a62066] rounded-full"></span>
         </motion.h2>

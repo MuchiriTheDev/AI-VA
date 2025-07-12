@@ -29,8 +29,8 @@ const AboutHero = () => {
           variants={textVariants}
         >
           <h1 className="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">
-            Empower Your <span className="text-color">Business.</span> <br />
-            Reclaim Your <span className="text-color">Time.</span>
+            For the  <span className="text-gray-900">Founder Who’s</span> <br />
+             <span className="text-color">Been Doing It All.</span>
           </h1>
           <p className="text-xs sm:text-sm text-gray-600 mb-6 leading-relaxed max-w-md mx-auto lg:mx-0">
             Stop juggling endless tasks. Our AI-powered virtual assistant handles the details, so you can focus on what matters most—growing your business.
@@ -45,15 +45,7 @@ const AboutHero = () => {
               Book Now
               <span className="absolute inset-0 rounded-full bg-white opacity-0 hover:opacity-10 transition-opacity duration-300"></span>
             </motion.button>
-            <motion.a
-              href="#learn-more"
-              className="text-color font-semibold py-2 px-6 rounded-full border border-[#C8287E] hover:bg-color/10 transition-colors duration-300"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              aria-label="Learn More About Our Services"
-            >
-              Learn More
-            </motion.a>
+           
           </div>
         </motion.div>
 

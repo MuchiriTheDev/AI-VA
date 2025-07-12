@@ -107,11 +107,11 @@ const ContactUs = () => {
       >
         {/* Headline */}
         <motion.h1
-          className="text-2xl sm:text-3xl md:text-4xl font-bold text-color mb-2 text-center leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-color mb-2 text-center leading-tight"
           variants={itemVariants}
         >
           Contact Us
-          <span className="block text-lg sm:text-xl md:text-2xl italic text-gray-800 mt-2">
+          <span className="block text-xl sm:text-2xl md:text-3xl italic text-gray-800 mt-2">
             You Don’t Have to Do It Alone Anymore
           </span>
           <span className="block w-48 h-1 mx-auto mt-4 bg-gradient-to-r from-[#C8287E] to-[#a62066] rounded-full"></span>
@@ -131,20 +131,20 @@ const ContactUs = () => {
         </motion.p>
 
         {/* Split Layout: Form and Sidebar */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-16">
+        <div className="w-full flex justify-center items-center gap-8 mb-16">
           {/* Contact Form (3/5) */}
           <motion.div
-            className="lg:col-span-3 bg-white rounded-2xl shadow-xl p-8 border-t-4 border-[#C8287E]"
+            className="max-w-6xl bg-white rounded-2xl shadow-xl p-8 border-t-4 border-[#C8287E]"
             variants={itemVariants}
             whileHover="hover"
           >
-            <h2 className="text-lg sm:text-xl font-semibold text-color mb-6 text-center">
+            <h2 className="text-xl sm:text-2xl font-semibold text-color mb-6 text-center">
               Ready to Get Started?
             </h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-xs font-medium text-gray-700 mb-1">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                     Full Name <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -154,12 +154,12 @@ const ContactUs = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-sm text-gray-700 bg-gray-50"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-gray-700 bg-gray-50"
                     aria-label="Your full name"
                   />
                 </div>
-                amacı<div>
-                  <label htmlFor="email" className="block text-xs font-medium text-gray-700 mb-1">
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                     Email Address <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -169,14 +169,14 @@ const ContactUs = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-sm text-gray-700 bg-gray-50"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-gray-700 bg-gray-50"
                     aria-label="Your email address"
                   />
                 </div>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="businessName" className="block text-xs font-medium text-gray-700 mb-1">
+                  <label htmlFor="businessName" className="block text-sm font-medium text-gray-700 mb-1">
                     Business Name (Optional)
                   </label>
                   <input
@@ -185,12 +185,12 @@ const ContactUs = () => {
                     name="businessName"
                     value={formData.businessName}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-sm text-gray-700 bg-gray-50"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-gray-700 bg-gray-50"
                     aria-label="Your business name"
                   />
                 </div>
                 <div>
-                  <label htmlFor="website" className="block text-xs font-medium text-gray-700 mb-1">
+                  <label htmlFor="website" className="block text-sm font-medium text-gray-700 mb-1">
                     Website or Social Media Handle (Optional)
                   </label>
                   <input
@@ -199,14 +199,14 @@ const ContactUs = () => {
                     name="website"
                     value={formData.website}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-sm text-gray-700 bg-gray-50"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-gray-700 bg-gray-50"
                     aria-label="Your website or social media handle"
                     placeholder="Helps us understand your business"
                   />
                 </div>
               </div>
               <div>
-                <label htmlFor="location" className="block text-xs font-medium text-gray-700 mb-1">
+                <label htmlFor="location" className="block text-sm font-medium text-gray-700 mb-1">
                   Where are you located?
                 </label>
                 <select
@@ -214,7 +214,7 @@ const ContactUs = () => {
                   name="location"
                   value={formData.location}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-sm text-gray-700 bg-gray-50"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-gray-700 bg-gray-50"
                   aria-label="Your location"
                 >
                   <option value="">Select a location</option>
@@ -229,19 +229,19 @@ const ContactUs = () => {
                     name="locationOther"
                     value={formData.locationOther || ''}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2 focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-sm text-gray-700 bg-gray-50"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg mt-2 focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-gray-700 bg-gray-50"
                     aria-label="Specify your location"
                     placeholder="Specify your location"
                   />
                 )}
               </div>
               <div>
-                <label className="block text-xs font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
                   What kind of support are you looking for? (Select all that apply)
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {supportOptions.map((option, idx) => (
-                    <label key={idx} className="flex items-center text-xs text-gray-700">
+                    <label key={idx} className="flex items-center text-sm text-gray-700">
                       <input
                         type="checkbox"
                         name="supportTypes"
@@ -255,7 +255,7 @@ const ContactUs = () => {
                     </label>
                   ))}
                   <div>
-                    <label className="flex items-center text-xs text-gray-700">
+                    <label className="flex items-center text-sm text-gray-700">
                       <input
                         type="checkbox"
                         name="supportTypes"
@@ -273,7 +273,7 @@ const ContactUs = () => {
                         name="otherSupport"
                         value={formData.otherSupport}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2 focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-sm text-gray-700 bg-gray-50"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg mt-2 focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-gray-700 bg-gray-50"
                         aria-label="Specify other support type"
                         placeholder="Please specify"
                       />
@@ -282,7 +282,7 @@ const ContactUs = () => {
                 </div>
               </div>
               <div>
-                <label htmlFor="priority" className="block text-xs font-medium text-gray-700 mb-1">
+                <label htmlFor="priority" className="block text-sm font-medium text-gray-700 mb-1">
                   What’s your biggest priority right now?
                 </label>
                 <input
@@ -291,13 +291,13 @@ const ContactUs = () => {
                   name="priority"
                   value={formData.priority}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-sm text-gray-700 bg-gray-50"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-gray-700 bg-gray-50"
                   aria-label="Your biggest priority"
                   placeholder="E.g., 'Freeing up my time,' 'Launching my course,' 'Getting organized'"
                 />
               </div>
               <div>
-                <label htmlFor="startTime" className="block text-xs font-medium text-gray-700 mb-1">
+                <label htmlFor="startTime" className="block text-sm font-medium text-gray-700 mb-1">
                   When would you like to get started?
                 </label>
                 <select
@@ -305,7 +305,7 @@ const ContactUs = () => {
                   name="startTime"
                   value={formData.startTime}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-sm text-gray-700 bg-gray-50"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-gray-700 bg-gray-50"
                   aria-label="When you want to start"
                 >
                   <option value="">Select an option</option>
@@ -316,7 +316,7 @@ const ContactUs = () => {
                 </select>
               </div>
               <div>
-                <label htmlFor="success" className="block text-xs font-medium text-gray-700 mb-1">
+                <label htmlFor="success" className="block text-sm font-medium text-gray-700 mb-1">
                   How would you define success working with a VA?
                 </label>
                 <textarea
@@ -325,13 +325,13 @@ const ContactUs = () => {
                   value={formData.success}
                   onChange={handleChange}
                   rows="4"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-sm text-gray-700 bg-gray-50"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-gray-700 bg-gray-50"
                   aria-label="Define success with a virtual assistant"
                   placeholder="E.g., 'I’d love to feel like I can finally breathe,' or 'My goal is to grow while working fewer hours.'"
                 ></textarea>
               </div>
               <div>
-                <label htmlFor="additionalInfo" className="block text-xs font-medium text-gray-700 mb-1">
+                <label htmlFor="additionalInfo" className="block text-sm font-medium text-gray-700 mb-1">
                   Anything else you’d like us to know? (Optional)
                 </label>
                 <textarea
@@ -340,26 +340,26 @@ const ContactUs = () => {
                   value={formData.additionalInfo}
                   onChange={handleChange}
                   rows="4"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-sm text-gray-700 bg-gray-50"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C8287E] text-gray-700 bg-gray-50"
                   aria-label="Additional information before the call"
                 ></textarea>
               </div>
               <motion.button
                 type="submit"
-                className="inline-flex items-center px-6 py-2 text-sm font-semibold rounded-full bg-color text-white shadow-md hover:bg-[#a62066] transition-colors duration-300 w-full sm:w-auto"
+                className="inline-flex items-center px-8 py-3 text-base font-semibold rounded-full bg-color text-white shadow-md hover:bg-[#a62066] transition-colors duration-300 w-full sm:w-auto"
                 variants={itemVariants}
                 whileHover="hover"
                 whileTap={{ scale: 0.95 }}
                 aria-label="Submit your application and book a discovery call with AI Empowered Virtual Assistants"
               >
-                <FaCalendarAlt className="mr-2 text-sm" aria-hidden="true" />
+                <FaCalendarAlt className="mr-2 text-base" aria-hidden="true" />
                 Apply + Book Your Call
               </motion.button>
             </form>
-            <p className="text-xs text-gray-600 mt-4 text-center">
+            <p className="text-sm text-gray-600 mt-4 text-center">
               Prefer to reach out directly? Email us at:{' '}
               <a
-                href="mailto:info@empowerthevais.com"
+                to="mailto:info@empowerthevais.com"
                 className="text-color hover:underline"
                 aria-label="Email AI Empowered Virtual Assistants directly"
               >
@@ -368,9 +368,32 @@ const ContactUs = () => {
             </p>
           </motion.div>
 
+          
+        </div>
+
+        {/* Additional Sections */}
+        <div className="space-y-12 max-w-4xl mx-auto">
+          {/* What Happens Next */}
+          <motion.div
+            className="bg-white rounded-2xl shadow-lg p-8"
+            variants={itemVariants}
+            whileHover="hover"
+          >
+            <h2 className="text-xl sm:text-2xl font-semibold text-color mb-4 ">
+              What Happens Next
+            </h2>
+            <ul className="text-sm sm:text-base text-gray-600 leading-relaxed space-y-3 list-disc  pl-6">
+              <li>Fill out the short application form above.</li>
+              <li>We’ll review it and respond within 1 business day.</li>
+              <li>
+                You’ll be invited to book a free Discovery Call to explore your business goals, support
+                needs, and VA match.
+              </li>
+            </ul>
+          </motion.div>
           {/* Sidebar: Founder Quote, Photo, Social Media */}
           <motion.div
-            className="lg:col-span-2 bg-gradient-to-b from-[#C8287E]/10 to-[#a62066]/10 rounded-2xl shadow-xl p-8 flex flex-col items-center"
+            className=" bg-gradient-to-b from-[#C8287E]/10 to-[#a62066]/10 rounded-2xl shadow-xl p-8 flex flex-col items-center"
             variants={itemVariants}
             whileHover="hover"
           >
@@ -381,48 +404,51 @@ const ContactUs = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-lg font-semibold text-color mb-4 text-center">
+            <h3 className="text-xl font-semibold text-color mb-4 text-center">
               From Our Founder
             </h3>
-            <p className="text-xs md:text-sm text-gray-600 mb-6 leading-relaxed text-center">
+            <p className="text-sm md:text-base text-gray-600 mb-6 leading-relaxed text-center">
               "You’ve carried the weight long enough. I built AI Empowered VAs to help CEOs like you
               hand things off—with strategy, intention, and trust. You’re not just getting support.
               You’re gaining a team that gets things done and gets{' '}
               <span className="font-semibold text-color">you</span>."
             </p>
-            <p className="text-xs font-semibold text-gray-600 mb-6 text-center">
-              — Caroline, Founder & VA Strategist
+            <p className="text-lg font-bold text-color text-center">
+              Caroline
+            </p>
+            <p className='italic text-sm text-gray-600 mb-6 text-center'>
+              Founder & VA Strategist
             </p>
             <div className="flex gap-6 mb-6">
               <a
-                href="https://www.linkedin.com/company/empoweredaiva/"
+                to="https://www.linkedin.com/company/empoweredaiva/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-color hover:text-[#a62066] transition-colors duration-300"
                 aria-label="Follow AI Empowered Virtual Assistants on LinkedIn"
               >
-                <FaLinkedin className="text-xl md:text-2xl" aria-hidden="true" />
+                <FaLinkedin className="text-2xl md:text-3xl" aria-hidden="true" />
               </a>
               <a
-                href="https://www.facebook.com/share/16Rgb8vQFr/"
+                to="https://www.facebook.com/share/16Rgb8vQFr/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-color hover:text-[#a62066] transition-colors duration-300"
                 aria-label="Follow AI Empowered Virtual Assistants on Facebook"
               >
-                <FaFacebook className="text-xl md:text-2xl" aria-hidden="true" />
+                <FaFacebook className="text-2xl md:text-3xl" aria-hidden="true" />
               </a>
               <a
-                href="https://www.instagram.com/aiempoweredvas?utm_source=qr&igsh=MWw2cHh3enhxb3ZjYg=="
+                to="https://www.instagram.com/aiempoweredvas?utm_source=qr&igsh=MWw2cHh3enhxb3ZjYg=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-color hover:text-[#a62066] transition-colors duration-300"
                 aria-label="Follow AI Empowered Virtual Assistants on Instagram"
               >
-                <FaInstagram className="text-xl md:text-2xl" aria-hidden="true" />
+                <FaInstagram className="text-2xl md:text-3xl" aria-hidden="true" />
               </a>
             </div>
-            <div className="flex flex-col sm:flex-row items-center gap-4 text-xs text-gray-600">
+            <div className="flex flex-col sm:flex-row items-center gap-4 text-sm text-gray-600">
               <p className="flex items-center">
                 <FaClock className="text-color mr-2" aria-hidden="true" />
                 <span>
@@ -437,28 +463,6 @@ const ContactUs = () => {
               </p>
             </div>
           </motion.div>
-        </div>
-
-        {/* Additional Sections */}
-        <div className="space-y-12 max-w-4xl mx-auto">
-          {/* What Happens Next */}
-          <motion.div
-            className="bg-white rounded-2xl shadow-lg p-8"
-            variants={itemVariants}
-            whileHover="hover"
-          >
-            <h2 className="text-lg sm:text-xl font-semibold text-color mb-4 text-center">
-              What Happens Next
-            </h2>
-            <ul className="text-xs sm:text-sm text-gray-600 leading-relaxed space-y-3 list-none text-center">
-              <li>Fill out the short application form above.</li>
-              <li>We’ll review it and respond within 1 business day.</li>
-              <li>
-                You’ll be invited to book a free Discovery Call to explore your business goals, support
-                needs, and VA match.
-              </li>
-            </ul>
-          </motion.div>
 
           {/* Why This Partnership Matters */}
           <motion.div
@@ -466,10 +470,10 @@ const ContactUs = () => {
             variants={itemVariants}
             whileHover="hover"
           >
-            <h2 className="text-lg sm:text-xl font-semibold text-color mb-4 text-center">
+            <h2 className="text-xl sm:text-2xl font-semibold text-color mb-4 text-center">
               Why This Partnership Matters
             </h2>
-            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed text-center">
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed text-center">
               When you work with us, you’re not just gaining{' '}
               <span className="font-semibold text-color">expert support</span>—you’re partnering with
               purpose-driven VAs from Kenya who are trained in AI and built to move your business
@@ -484,10 +488,10 @@ const ContactUs = () => {
             variants={itemVariants}
             whileHover="hover"
           >
-            <h2 className="text-lg sm:text-xl font-semibold text-color mb-4 text-center">
+            <h2 className="text-xl sm:text-2xl font-semibold text-color mb-4 ">
               What to Expect on Your Discovery Call
             </h2>
-            <ul className="text-xs sm:text-sm text-gray-600 leading-relaxed space-y-3 list-disc list-inside text-center">
+            <ul className="text-sm sm:text-base text-gray-600 leading-relaxed space-y-3 list-disc list-inside pl-10">
               <li>We’ll talk about the support you need (even if you’re not 100% sure yet)</li>
               <li>You’ll define what success looks like for you</li>
               <li>We’ll share how our VAs integrate AI tools into your workflows</li>
@@ -501,23 +505,23 @@ const ContactUs = () => {
             className="text-center"
             variants={containerVariants}
           >
-            <h2 className="text-lg sm:text-xl font-semibold text-color mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-color mb-4">
               Let’s Simplify Your Life—and Scale Your Business
             </h2>
-            <p className="text-xs sm:text-sm text-gray-600 mb-6 leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-600 mb-6 leading-relaxed">
               Complete the form above and we’ll be in touch within 1 business day.
             </p>
             <Link
               to="https://zcal.co/carolinekabi/discovery-call-30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-2 text-sm font-semibold rounded-full bg-color text-white shadow-md hover:bg-[#a62066] transition-colors duration-300"
+              className="inline-flex items-center px-8 py-3 text-base font-semibold rounded-full bg-color text-white shadow-md hover:bg-[#a62066] transition-colors duration-300"
               variants={itemVariants}
               whileHover="hover"
               whileTap={{ scale: 0.95 }}
               aria-label="Book a free discovery call with AI Empowered Virtual Assistants"
             >
-              <FaCalendarAlt className="mr-2 text-sm" aria-hidden="true" />
+              <FaCalendarAlt className="mr-2 text-base" aria-hidden="true" />
               Apply + Book Your Call
             </Link>
           </motion.div>

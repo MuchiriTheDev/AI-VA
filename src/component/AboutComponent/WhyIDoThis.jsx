@@ -25,13 +25,15 @@ const WhyIDoThis = () => {
           <p className="text-xs sm:text-sm text-gray-600 mb-3 leading-relaxed max-w-md mx-auto md:mx-0">
             I built this agency to solve two problems at once:
           </p>
-          <p className="text-xs sm:text-sm text-gray-600 mb-3 leading-relaxed max-w-md mx-auto md:mx-0">
+         <ol className='pl-7 list-disc text-xs sm:text-sm text-gray-600 mb-3 leading-relaxed max-w-md mx-auto md:mx-0'>
+           <li className="text-xs sm:text-sm text-gray-600 mb-3 leading-relaxed max-w-md mx-auto md:mx-0">
             Founders, especially women of color, deserve <span className="font-semibold text-color">high-level support</span> that empowers them to move forward—not just stay afloat.
-          </p>
-          <p className="text-xs sm:text-sm text-gray-600 mb-3 leading-relaxed max-w-md mx-auto md:mx-0">
+          </li>
+          <li className="text-xs sm:text-sm text-gray-600 mb-3 leading-relaxed max-w-md mx-auto md:mx-0">
             Talented, hardworking professionals in Kenya deserve access to <span className="font-semibold text-color">remote work</span> that honors their intelligence, trains them for the future, and frees them from grueling commutes.
-          </p>
-          <p className="text-xs sm:text-sm text-gray-600 mb-4 leading-relaxed max-w-md mx-auto md:mx-0 mb-5">
+          </li>
+         </ol>
+          <p className="text-xs sm:text-sm text-gray-600 leading-relaxed max-w-md mx-auto md:mx-0 mb-5">
             Here, we create that bridge. <br />
             <span className="font-semibold text-color">One founder. One VA. One transformation at a time.</span>
           </p>

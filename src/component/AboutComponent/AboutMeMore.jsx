@@ -1,9 +1,17 @@
 import React from 'react';
+import { assets } from '../../assets/assets';
 
 const AboutMeMore = () => {
   return (
     <section className="bg-white py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl flex items-center justify-center flex-col mx-auto">
+        <div className="w-40 h-40 md:w-48 md:h-48 bg-gray-200 rounded-full overflow-hidden mb-6 border-2 border-[#C8287E]">
+          <img
+            src={assets.dp}
+            alt="Caroline, Founder of AI Empowered Virtual Assistants"
+            className="w-full h-full object-cover"
+          />
+        </div>
         {/* Header Section */}
         <h2 className="text-xl sm:text-2xl font-bold text-color mb-6 text-center">
           A Bit More About Me
