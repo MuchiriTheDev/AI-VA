@@ -38,7 +38,7 @@ const AboutHero = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Link
-              to={'"https://zcal.co/carolinekabi/discovery-call-30min'}
+              to={'https://zcal.co/carolinekabi/discovery-call-30min'}
               className="relative bg-color text-white font-semibold py-2 px-6 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 bg-opacity-95 hover:bg-opacity-100 overflow-hidden"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}

@@ -69,7 +69,7 @@ const Footer = () => {
           style={{ color: '#333333' }} // Dark gray
           variants={itemVariants}
         >
-          © 2025 AI Empowered VAs™. All Rights Reserved. Built with efficiency by your virtual assistant experts.
+          © 2025 AI Empowered VAs™. All Rights Reserved. Built with efficiency by your virtual assistant experts. 
         </motion.span>
 
         {/* Social Media Links */}
