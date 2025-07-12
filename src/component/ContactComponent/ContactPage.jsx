@@ -362,7 +362,7 @@ const ContactUs = () => {
                 className="text-color hover:underline"
                 aria-label="Email AI Empowered Virtual Assistants directly"
               >
-                info@empowerthevais.com
+                info@empoweredaiva.com
               </a>
             </p>
           </motion.div>
