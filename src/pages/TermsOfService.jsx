@@ -245,11 +245,11 @@ const TermsOfService = () => {
               <br />
               Email:{' '}
               <a
-                href="mailto:info@empoweredvais.com"
+                href="mailto:info@empoweredaiva.com"
                 className="text-color hover:underline"
                 aria-label="Email AI Empowered Virtual Assistants"
               >
-                info@empoweredvais.com
+                info@empoweredaiva.com
               </a>
               <br />
               Website:{' '}

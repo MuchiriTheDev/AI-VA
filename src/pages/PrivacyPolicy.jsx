@@ -370,13 +370,13 @@ const PrivacyPolicy = () => {
               <br />
               Website:{' '}
               <a
-                href="http://empoweredaiva.com"
+                href="https://empoweredaiva.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-color hover:underline"
                 aria-label="Visit AI Empowered VAs website"
               >
-                http://empoweredaiva.com
+                https://empoweredaiva.com
               </a>
             </p>
           </motion.section>
