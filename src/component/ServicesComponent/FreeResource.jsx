@@ -143,7 +143,7 @@ const FreeResource = () => {
       >
         {/* Headline */}
         <motion.h1
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-color mb-2 text-center leading-tight"
+          className="text-3xl sm:text-4xl  font-bold text-color mb-2 text-center leading-tight"
           variants={itemVariants}
         >
           Free Resources
@@ -152,7 +152,7 @@ const FreeResource = () => {
 
         {/* Subheadline */}
         <motion.p
-          className="text-sm sm:text-base md:text-lg text-gray-600 mb-12 text-center leading-relaxed max-w-3xl mx-auto"
+          className="text-sm sm:text-base  text-gray-600 mb-12 text-center leading-relaxed max-w-3xl mx-auto"
           variants={itemVariants}
         >
           Unlock valuable insights with our free, downloadable PDFs. Enter your email to access these

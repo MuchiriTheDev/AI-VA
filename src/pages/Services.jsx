@@ -10,8 +10,8 @@ const Services = () => {
     <div>
         <Navbar />
         <ServicesHero />
-        <WhyChooseUs />
         <FreeResource />
+        <WhyChooseUs />
         <Footer />
     </div>
   )
