@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaCalendarAlt } from 'react-icons/fa';
+import { FaCalendarAlt, FaCriticalRole } from 'react-icons/fa';
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import { assets } from '../../assets/assets';
 
@@ -39,9 +40,11 @@ const itemVariants = {
 
 const ContactUs = () => {
   const [formStatus, setFormStatus] = useState(null);
+  const [loading , setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     setFormStatus('Sending....');
 
     // Prepare form data for Web3Forms
@@ -77,12 +80,14 @@ const ContactUs = () => {
       const result = await response.json();
 
       if (result.success) {
+        setLoading(false);
         setFormStatus({
           type: 'success',
           message: 'Form submitted successfully! We’ll get back to you soon.',
         });
         e.target.reset();
       } else {
+        setLoading(false);
         console.error('Error:', result);
         setFormStatus({
           type: 'error',
@@ -91,6 +96,7 @@ const ContactUs = () => {
       }
     } catch (error) {
       console.error('Error submitting form:', error);
+      setLoading(false);
       setFormStatus({
         type: 'error',
         message: 'Failed to connect to the server. Please check your network or contact us at info@empoweredaivas.com.',
@@ -341,12 +347,23 @@ const ContactUs = () => {
                 type="submit"
                 className="inline-flex items-center px-8 py-3 text-base font-semibold rounded-full bg-color text-white shadow-md hover:bg-[#a62066] transition-colors duration-300 w-full sm:w-auto"
                 variants={itemVariants}
+                disabled={loading}
                 whileHover="hover"
                 whileTap={{ scale: 0.95 }}
                 aria-label="Submit your application and book a discovery call"
               >
-                <FaCalendarAlt className="mr-2 text-base" aria-hidden="true" />
-                Apply + Book Your Call
+                {loading ? (
+                    <div className="flex items-center justify-center">
+                      <AiOutlineLoading3Quarters className="animate-spin mr-2" /> 
+                      Submitting. . . 
+                    </div>
+                    ) : (
+                      <div className="flex items-center justify-center">
+                        <FaCalendarAlt className=" mr-2" />
+                        Apply + Book Your Call
+                      </div>
+                    )
+                }
               </motion.button>
             </form>
             <p className="text-sm text-gray-600 mt-4 text-center">
