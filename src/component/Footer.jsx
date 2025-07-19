@@ -63,22 +63,7 @@ const Footer = () => {
           />
         </motion.a>
 
-        {/* Terms and Services & Privacy Policy Links */}
-        <motion.div
-          className="flex justify-center space-x-6 mb-4"
-          variants={containerVariants}
-        >
-          <motion.a
-            href="/terms-and-conditions"
-            className="text-[0.65rem] sm:text-xs text-gray-500 hover:text-[#a62066] transition-colors duration-300"
-            variants={itemVariants}
-            whileHover="hover"
-            aria-label="View Terms and Services"
-          >
-            Terms and Conditions
-          </motion.a>
-  
-        </motion.div>
+       
 
         {/* Copyright Notice */}
         <motion.span
@@ -88,6 +73,31 @@ const Footer = () => {
         >
           © 2025 AI Empowered VAs™. All Rights Reserved. Built with efficiency by your virtual assistant experts.
         </motion.span>
+         {/* Terms and Services & Privacy Policy Links */}
+        <motion.div
+          className="flex justify-center space-x-6 mb-4"
+          variants={containerVariants}
+        >
+          <motion.a
+            href="/terms-and-conditions"
+            className="text-xs text-gray-500 hover:text-color transition-colors duration-300"
+            variants={itemVariants}
+            whileHover="hover"
+            aria-label="View Terms and Services"
+          >
+            Terms and Conditions
+          </motion.a>
+          <motion.a
+            href="/privacy-policy"
+            className="text-xs text-gray-500 hover:text-color transition-colors duration-300"
+            variants={itemVariants}
+            whileHover="hover"
+            aria-label="View Terms and Services"
+          >
+            Privacy Policy
+          </motion.a>
+  
+        </motion.div>
 
         {/* Social Media Links */}
         <motion.ul
@@ -97,17 +107,17 @@ const Footer = () => {
           {[
             {
               href: 'https://www.facebook.com/share/16Rgb8vQFr/',
-              icon: <FaFacebookF size={18} className="text-[0.65rem] sm:text-xs" style={{ color: '#C8287E' }} aria-hidden="true" />,
+              icon: <FaFacebookF size={18} className="text-[0.65rem] sm:text-xs" style={{ color: '#8E24AA' }} aria-hidden="true" />,
               label: 'Follow AI Empowered Virtual Assistants on Facebook',
             },
             {
               href: 'https://www.instagram.com/aiempoweredvas?utm_source=qr&igsh=MWw2cHh3enhxb3ZjYg==',
-              icon: <FaInstagram size={18} className="text-[0.65rem] sm:text-xs" style={{ color: '#C8287E' }} aria-hidden="true" />,
+              icon: <FaInstagram size={18} className="text-[0.65rem] sm:text-xs" style={{ color: '#8E24AA' }} aria-hidden="true" />,
               label: 'Follow AI Empowered Virtual Assistants on Instagram',
             },
             {
               href: 'https://www.linkedin.com/company/empoweredaiva/',
-              icon: <FaLinkedinIn size={18} className="text-[0.65rem] sm:text-xs" style={{ color: '#C8287E' }} aria-hidden="true" />,
+              icon: <FaLinkedinIn size={18} className="text-[0.65rem] sm:text-xs" style={{ color: '#8E24AA' }} aria-hidden="true" />,
               label: 'Follow AI Empowered Virtual Assistants on LinkedIn',
             },
           ].map((link, index) => (

@@ -6,6 +6,7 @@ import Pricing from './pages/Pricing'
 import ContactUs from './pages/ContactUs'
 import Services from './pages/Services'
 import TermsOfService from './pages/TermsOfService'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 
 const App = () => {
   const location = useLocation()
@@ -22,6 +23,7 @@ const App = () => {
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/contact" element={<ContactUs />} />
       <Route path='/terms-and-conditions' element={<TermsOfService />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
       <Route path="*" element={<Home />} />
     </Routes>
   )

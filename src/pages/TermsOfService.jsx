@@ -174,70 +174,70 @@ const TermsOfService = () => {
           </motion.section>
 
           <motion.section id="user-submissions" variants={itemVariants} className="border-t border-gray-200 pt-6">
-            <h2 className="text-base sm:text-lg font-semibold text-[#C8287E] mb-3">4. User Submissions</h2>
+            <h2 className="text-base sm:text-lg font-semibold text-color mb-3">4. User Submissions</h2>
             <p className="text-[0.65rem] sm:text-xs text-gray-600 leading-relaxed">
               If you submit any feedback, testimonials, or materials via forms or email, you grant us a non-exclusive, worldwide, royalty-free license to use, copy, modify, publish, or distribute those materials for marketing or other purposes, unless you explicitly request otherwise in writing.
             </p>
           </motion.section>
 
           <motion.section id="payment-terms" variants={itemVariants} className="border-t border-gray-200 pt-6">
-            <h2 className="text-base sm:text-lg font-semibold text-[#C8287E] mb-3">5. Payment Terms</h2>
+            <h2 className="text-base sm:text-lg font-semibold text-color mb-3">5. Payment Terms</h2>
             <p className="text-[0.65rem] sm:text-xs text-gray-600 leading-relaxed">
               Payments for our services are outlined in individual agreements or proposals. All payments must be made in full as agreed upon, and are non-refundable unless otherwise stated. Invoices are payable via Wise or other methods specified. Late payments may incur additional fees or suspension of services.
             </p>
           </motion.section>
 
           <motion.section id="no-guarantees" variants={itemVariants} className="border-t border-gray-200 pt-6">
-            <h2 className="text-base sm:text-lg font-semibold text-[#C8287E] mb-3">6. No Guarantees</h2>
+            <h2 className="text-base sm:text-lg font-semibold text-color mb-3">6. No Guarantees</h2>
             <p className="text-[0.65rem] sm:text-xs text-gray-600 leading-relaxed">
               We make every effort to deliver high-quality results, but we do not guarantee specific outcomes or results. Success depends on various factors outside of our control. The Company is not liable for any business outcomes resulting from the use of our services.
             </p>
           </motion.section>
 
           <motion.section id="third-party-links" variants={itemVariants} className="border-t border-gray-200 pt-6">
-            <h2 className="text-base sm:text-lg font-semibold text-[#C8287E] mb-3">7. Third-Party Links</h2>
+            <h2 className="text-base sm:text-lg font-semibold text-color mb-3">7. Third-Party Links</h2>
             <p className="text-[0.65rem] sm:text-xs text-gray-600 leading-relaxed">
               This Site may contain links to third-party websites or tools. We do not control and are not responsible for the content, privacy practices, or availability of those websites. Use them at your own risk.
             </p>
           </motion.section>
 
           <motion.section id="disclaimer" variants={itemVariants} className="border-t border-gray-200 pt-6">
-            <h2 className="text-base sm:text-lg font-semibold text-[#C8287E] mb-3">8. Disclaimer</h2>
+            <h2 className="text-base sm:text-lg font-semibold text-color mb-3">8. Disclaimer</h2>
             <p className="text-[0.65rem] sm:text-xs text-gray-600 leading-relaxed">
               The Site is provided "as is" without warranties of any kind, either express or implied. We do not warrant that the Site will be uninterrupted, secure, or error-free. Use of this Site and our services is at your sole risk.
             </p>
           </motion.section>
 
           <motion.section id="limitation-of-liability" variants={itemVariants} className="border-t border-gray-200 pt-6">
-            <h2 className="text-base sm:text-lg font-semibold text-[#C8287E] mb-3">9. Limitation of Liability</h2>
+            <h2 className="text-base sm:text-lg font-semibold text-color mb-3">9. Limitation of Liability</h2>
             <p className="text-[0.65rem] sm:text-xs text-gray-600 leading-relaxed">
               To the fullest extent permitted by law, AI Empowered VAs shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from your use or inability to use the Site or services.
             </p>
           </motion.section>
 
           <motion.section id="indemnification" variants={itemVariants} className="border-t border-gray-200 pt-6">
-            <h2 className="text-base sm:text-lg font-semibold text-[#C8287E] mb-3">10. Indemnification</h2>
+            <h2 className="text-base sm:text-lg font-semibold text-color mb-3">10. Indemnification</h2>
             <p className="text-[0.65rem] sm:text-xs text-gray-600 leading-relaxed">
               You agree to indemnify and hold harmless AI Empowered VAs and its team members from and against any claims, damages, liabilities, or expenses arising out of your use of the Site or breach of these Terms.
             </p>
           </motion.section>
 
           <motion.section id="modifications" variants={itemVariants} className="border-t border-gray-200 pt-6">
-            <h2 className="text-base sm:text-lg font-semibold text-[#C8287E] mb-3">11. Modifications</h2>
+            <h2 className="text-base sm:text-lg font-semibold text-color mb-3">11. Modifications</h2>
             <p className="text-[0.65rem] sm:text-xs text-gray-600 leading-relaxed">
               We may update or modify these Terms at any time without prior notice. The revised Terms will be effective as of the date they are posted on the Site. Continued use of the Site constitutes acceptance of the revised Terms.
             </p>
           </motion.section>
 
           <motion.section id="governing-law" variants={itemVariants} className="border-t border-gray-200 pt-6">
-            <h2 className="text-base sm:text-lg font-semibold text-[#C8287E] mb-3">12. Governing Law</h2>
+            <h2 className="text-base sm:text-lg font-semibold text-color mb-3">12. Governing Law</h2>
             <p className="text-[0.65rem] sm:text-xs text-gray-600 leading-relaxed">
               These Terms are governed by and construed in accordance with the laws of the Republic of Kenya, without regard to its conflict of law principles.
             </p>
           </motion.section>
 
           <motion.section id="contact-us" variants={itemVariants} className="border-t border-gray-200 pt-6">
-            <h2 className="text-base sm:text-lg font-semibold text-[#C8287E] mb-3">13. Contact Us</h2>
+            <h2 className="text-base sm:text-lg font-semibold text-color mb-3">13. Contact Us</h2>
             <p className="text-[0.65rem] sm:text-xs text-gray-600 leading-relaxed">
               If you have any questions about these Terms, please contact us at:
               <br />
@@ -246,7 +246,7 @@ const TermsOfService = () => {
               Email:{' '}
               <a
                 href="mailto:info@empoweredvais.com"
-                className="text-[#C8287E] hover:underline"
+                className="text-color hover:underline"
                 aria-label="Email AI Empowered Virtual Assistants"
               >
                 info@empoweredvais.com
